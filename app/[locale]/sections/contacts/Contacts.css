@@ -1,0 +1,136 @@
+.icon-container a {
+    max-height: 0;
+    max-width: fit-content;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+.icon-box {
+    display: inline-block;
+    position: relative;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+.social-icon-hover {
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container:hover img.social-icon {
+    display: none;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container:hover .social-icon-hover {
+    display: inline-block;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container img {
+    pointer-events: bounding-box;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 44px;
+    padding: 54px 0;
+}
+.contact-info {
+    padding: 136px 80px;
+    min-width: 100%;
+}
+.google-map {
+    flex: 2;
+    height: 470px;
+    border-radius: 76px;
+}
+.contact-content {
+    display: flex;
+    align-items: center;
+    gap: 32px 80px;
+    margin-top: 54px;
+    width: 100%;
+}
+.contact-info-items {
+    flex: 1;
+}
+.address-header {
+    display: flex;
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    gap: 18px;
+    margin-bottom: 54px;
+}
+.flex {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    font-size: 18px;
+}
+.details-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.contact-info .enroll-btn {
+    width: 100% !important;
+}
+
+@media (max-width: 991px) {
+    .contact-content {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+    .contact-info {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+
+    .google-map {
+        width: 100%;
+        flex: unset;
+        border-radius: 20px;
+    }
+    .contact-info-items {
+        width: 100%;
+        flex: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        padding: 74px 20px;
+    }
+
+    .google-map {
+        height: 400px;
+    }
+
+    .socials {
+        gap: 24px;
+    }
+
+    .contact-info-items h3 {
+        font-size: 24px;
+    }
+}

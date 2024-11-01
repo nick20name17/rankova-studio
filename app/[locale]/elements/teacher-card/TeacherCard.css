@@ -1,0 +1,65 @@
+.teacher-card {
+    display: flex;
+    min-width: 580px;
+}
+.teacher-photo-container {
+    position: relative;
+    min-width: 296px;
+    margin-bottom: 12px;
+}
+.teacher-name-spot {
+    position: absolute;
+    top: 12px;
+    right: 28px;
+}
+.teacher-photo {
+    min-width: 296px;
+}
+.profile-container {
+    min-width: 296px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teacher-card-name {
+    display: inline-block;
+    width: 125px;
+    text-align: center;
+    position: absolute;
+    right: 32px;
+    top: 16px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #111;
+    font-weight: 500;
+    z-index: 2;
+}
+.profile-container p {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 500;
+}
+.teacher-qa-container {
+    padding: 0 16px;
+    font-size: 18px;
+    line-height: 28px;
+}
+.teacher-qa-container h4 {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.teacher-qa-container p {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+    .teacher-card {
+        flex-direction: column;
+        min-width: 300px;
+    }
+
+    .teacher-qa-container {
+        margin-top: 32px;
+    }
+}

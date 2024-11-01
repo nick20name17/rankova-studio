@@ -1,0 +1,42 @@
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 330px));
+    grid-template-rows: 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.advantages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 136px 0px;
+    gap: 40px;
+}
+
+@media (max-width: 991px) {
+    .advantages-grid {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .advantages {
+        padding: 74px 0px;
+    }
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .advantages-grid {
+        gap: 12px;
+    }
+}

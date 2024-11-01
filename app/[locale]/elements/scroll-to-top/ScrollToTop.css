@@ -1,0 +1,25 @@
+.scroll-to-top-btn {
+    position: fixed;
+    top: 87%;
+    right: 50px;
+    z-index: 10;
+    width: 64px;
+    height: 64px;
+    border-radius: 1000px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top-btn:hover {
+    transform: scale(0.9);
+}

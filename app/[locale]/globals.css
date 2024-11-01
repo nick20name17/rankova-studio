@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    max-width: 100vw;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #3e3e3e;
+    scroll-behavior: smooth;
+    scroll-padding: 90px;
+}
+
+h2 {
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "Header": {
+        "title": "Music for everyone, not just the chosen",
+        "list1": "creative events",
+        "list2": "vocal lessons",
+        "list3": "instrumental lessons"
+    },
+    "ContactInfo": {
+        "title": "Leave your contact info, and we’ll get in touch with you",
+        "NamePlaceholder": "First and last name",
+        "btn": "Send",
+        "success": "Success!"
+    },
+    "Contacts": {
+        "title": "Contacts",
+        "street": "Rivne, P. Mohyla St. 28",
+        "hours1": "Mon-Fri: 9:00 AM - 8:30 PM",
+        "hours2": "Sat: 9:00 AM - 7:00 PM",
+        "hours3": "Sun: 9:00 AM - 3:00 PM"
+    },
+    "Story": {
+        "title": "Our story",
+        "caption": "Yana Vorozhko, Founder:",
+        "text": "It all started with a love for music and a desire to teach others. After returning from studying in Poland and working in China, I wanted to share the experience I gained there and be helpful in my hometown, Rivne.",
+        "btn": "Read more",
+        "open": "Collapse",
+        "text1": "At first, these were online vocal lessons due to the pandemic, then offline, and later piano lessons were added along with collaboration with another instructor. There were many who wanted to join. That’s how the idea to expand arose, so that anyone with a passion for music could pursue it. My dream was supported by Maksym Vorozhko and Oleksii Karchevskyi, who joined me on this journey.",
+        "text2": "We spent a year building the studio, putting in a lot of work and effort to create a comfortable environment for students to learn music. We wanted them to feel just as good as they would abroad and to be proud that Rivne could also have a modern space. And it’s not just about the space and equipment, but also about the approach to music lessons.",
+        "text3": "Eventually, we decided to create a place that would unite talented and creative people even more. 'Soul Place' is a space for our students' performances and various creative events to foster the development of Rivne’s musical culture."
+    },
+    "GiftCard": {
+        "title": "Gift certificates",
+        "text": "Here you can purchase certificates and give the gift of musical experiences to your loved ones and friends.",
+        "btn": "Purchase"
+    },
+    "TickerTape": {
+        "title": "energy independent, operating despite outages"
+    },
+
+    "EnrollBtn": {
+        "enroll": "Enroll"
+    },
+    "NotFoundPage": {
+        "title": "Looks like something went wrong",
+        "link": "Go back to the main page"
+    }
+}
