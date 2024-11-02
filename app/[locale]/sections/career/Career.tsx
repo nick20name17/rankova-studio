@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./Career.css";
 
 import CareerImg from "@/app/img/career.png";
+import { useTranslations } from "next-intl";
 
 const nunito = Nunito({
     subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
@@ -10,6 +11,7 @@ const nunito = Nunito({
 });
 
 export const Career = () => {
+    const t = useTranslations("Career");
     return (
         <section
             style={{ backgroundImage: `url(${CareerImg.src})` }}
@@ -29,11 +31,9 @@ export const Career = () => {
             </svg> */}
             <div className="career-cta">
                 <div className="career-content">
-                    <h2 className="career-header">Вакансії</h2>
+                    <h2 className="career-header">{t("title")}</h2>
                     <p className={`${nunito.className} career-text`}>
-                        Якщо ти закоханий у музику, маєш досвід та бажання
-                        навчати та творити і хочеш долучитись <br /> до нашої
-                        команди – заповни нашу анкету{" "}
+                        {t("text")}
                     </p>
                 </div>
                 <Link
@@ -42,7 +42,7 @@ export const Career = () => {
                     }
                     target="_blank">
                     <button className="black enroll-btn fill-form-btn">
-                        Заповнити анкету
+                        {t("btn")}
                     </button>
                 </Link>
             </div>

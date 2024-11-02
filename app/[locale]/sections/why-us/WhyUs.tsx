@@ -5,44 +5,46 @@ import Icon3 from "@/app/img/icon-3.svg";
 import Icon4 from "@/app/img/icon-4.svg";
 import Icon5 from "@/app/img/icon-5.svg";
 import Icon6 from "@/app/img/icon-6.svg";
+import { useTranslations } from "next-intl";
 import "./WhyUs.css";
 
 export const WhyUs = () => {
+    const t = useTranslations("WhyUs");
     const cards = [
         {
             icon: Icon1.src,
-            title: "Професійність",
-            text: "Професійна апаратура для онлайн та офлайн занять.",
+            title: t("listTitle1"),
+            text: t("ListDesc1"),
         },
         {
             icon: Icon2.src,
-            title: "Душевна атмосфера",
-            text: "Це місце, де панує душевна атмосфера і ти дійсно відчуваєш себе вільним.",
+            title: t("listTitle2"),
+            text: t("ListDesc2"),
         },
         {
             icon: Icon3.src,
-            title: "Комфортний простір",
-            text: "Дворівневий сучасний і комфортний простір для музичного розвитку.",
+            title: t("listTitle3"),
+            text: t("ListDesc3"),
         },
         {
             icon: Icon4.src,
-            title: "Робимо з любові",
-            text: "Навчання в дружній атмосфері, з любові до музики, а не з примусу.",
+            title: t("listTitle4"),
+            text: t("ListDesc4"),
         },
         {
             icon: Icon5.src,
-            title: "Концерти",
-            text: "Soul Place — місце, де можуть виступати учні та музиканти, а глядачі насолоджуватися концертами.",
+            title: t("listTitle5"),
+            text: t("ListDesc5"),
         },
         {
             icon: Icon6.src,
-            title: "Без обмежень",
-            text: "Заняття доступні для дорослих та дітей.",
+            title: t("listTitle6"),
+            text: t("ListDesc6"),
         },
     ];
     return (
         <section className="why-us">
-            <h2>Чому обирають нас ?</h2>
+            <h2>{t("title")}</h2>
             <div className="why-us-grid">
                 {cards.map((card) => (
                     <WhyUsCard

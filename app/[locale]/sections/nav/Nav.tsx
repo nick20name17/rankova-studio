@@ -16,7 +16,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import "./Nav.css";
-export const Nav = () => {
+
+interface INavItem {
+    btn: string;
+    teachers: string;
+    career: string;
+    prices: string;
+    gift: string;
+    qa: string;
+    reviews: string;
+    contact: string;
+    about: string;
+    description: string;
+}
+
+export const Nav = (props: INavItem) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -29,54 +43,52 @@ export const Nav = () => {
                 <Image priority src={Logo} alt="Ranok" />
             </Link>
             <div className={`nav-menu ${isOpen ? "open" : ""}`}>
-                <p className="nav-descr">
-                    Музика - для всіх, а не тільки для обраних.
-                </p>
+                <p className="nav-descr">{props.description}</p>
                 <Link
                     onClick={toggleMenu}
                     href="#about-us"
                     scroll={true}
                     className="nav-link">
-                    Про нас
+                    {props.about}
                 </Link>
                 <Link
                     onClick={toggleMenu}
                     href="#teachers"
                     className="nav-link">
-                    Викладачі
+                    {props.teachers}
                 </Link>
                 <Link
                     onClick={toggleMenu}
                     href="#career"
                     className="nav-link nav-link-mobile">
-                    Вакансії
+                    {props.career}
                 </Link>
                 <Link onClick={toggleMenu} href="#prices" className="nav-link">
-                    Вартість
+                    {props.prices}
                 </Link>
                 <Link
                     onClick={toggleMenu}
                     href="#gift-card"
                     className="nav-link">
-                    Сертифікати
+                    {props.gift}
                 </Link>
                 <Link
                     onClick={toggleMenu}
                     href="#qa"
                     className="nav-link nav-link-mobile">
-                    Часті запитання
+                    {props.qa}
                 </Link>{" "}
                 <Link
                     onClick={toggleMenu}
                     href="#reviews"
                     className="nav-link nav-link-mobile">
-                    Відгуки
+                    {props.reviews}
                 </Link>
                 <Link
                     onClick={toggleMenu}
                     href="#contact-info"
                     className="nav-link ">
-                    Контакти
+                    {props.contact}
                 </Link>
                 <LangSelect />
                 <Link
@@ -193,7 +205,7 @@ export const Nav = () => {
                     </div>
                 </div>
             </div>
-            <button className="nav-btn">Записатись</button>
+            <button className="nav-btn">{props.btn}</button>
             <button onClick={toggleMenu} className="burger">
                 {isOpen ? (
                     <svg

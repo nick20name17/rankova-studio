@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Comfortaa } from "next/font/google";
 import { notFound } from "next/navigation";
 import { ScrollToTop } from "./elements/scroll-to-top/ScrollToTop";
@@ -12,14 +12,22 @@ const comfortaa = Comfortaa({
     subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
 });
 
-export const metadata: Metadata = {
-    title: "Ранкова",
-    description: "Музика для всіх, а не тільки для обраних",
-    icons: {
-        icon: "/favicon.svg",
-        shortcut: "/favicon.svg",
-    },
-};
+export async function generateMetadata({
+    params: { locale },
+}: {
+    params: { locale: string };
+}) {
+    const t = await getTranslations({ locale, namespace: "Metadata" });
+
+    return {
+        title: t("title"),
+        description: t("description"),
+        icons: {
+            icon: "/favicon.svg",
+            shortcut: "/favicon.svg",
+        },
+    };
+}
 
 export default async function LocaleLayout({
     children,
@@ -32,10 +40,23 @@ export default async function LocaleLayout({
         notFound();
     }
 
+    const t = await getTranslations("Nav");
+
     return (
         <html lang="en">
             <body className={`${comfortaa.className}`}>
-                <Nav />
+                <Nav
+                    description={t("description")}
+                    about={t("about")}
+                    btn={t("btn")}
+                    teachers={t("teachers")}
+                    career={t("career")}
+                    prices={t("prices")}
+                    gift={t("gift")}
+                    qa={t("qa")}
+                    reviews={t("reviews")}
+                    contact={t("contact")}
+                />
                 <ScrollToTop />
                 {children}
                 <Footer />

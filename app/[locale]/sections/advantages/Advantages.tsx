@@ -5,44 +5,46 @@ import Icon12 from "@/app/img/icon-12.svg";
 import Icon7 from "@/app/img/icon-7.svg";
 import Icon8 from "@/app/img/icon-8.svg";
 import Icon9 from "@/app/img/icon-9.svg";
+import { useTranslations } from "next-intl";
 import "./Advantages.css";
 
 export const Advantages = () => {
+    const t = useTranslations("Advantages");
     const cards = [
         {
             icon: Icon7.src,
-            title: "Власна кав’ярня",
-            text: "У нас смачна кава та комфортна зона очікування.",
+            title: t("listTitle1"),
+            text: t("ListDesc1"),
         },
         {
             icon: Icon8.src,
-            title: "Енергонезалежні",
-            text: "У нас можна займатися та працювати навіть попри відключення.",
+            title: t("listTitle2"),
+            text: t("ListDesc2"),
         },
         {
             icon: Icon9.src,
-            title: "Оренда кімнати",
-            text: "Для твоїх самостійних занять",
+            title: t("listTitle3"),
+            text: t("ListDesc3"),
         },
         {
             icon: Icon10.src,
-            title: "Центр міста",
-            text: "Доступна локація: ми розташовані недалеко від центру міста.",
+            title: t("listTitle4"),
+            text: t("ListDesc4"),
         },
         {
             icon: Icon11.src,
-            title: "Комфорт",
-            text: "Комфортний температурний режим: влітку не спекотно, а взимку не холодно.",
+            title: t("listTitle5"),
+            text: t("ListDesc5"),
         },
         {
             icon: Icon12.src,
-            title: "Гнучкість",
-            text: "Гнучкі: підберемо для вас зручний час.",
+            title: t("listTitle6"),
+            text: t("ListDesc6"),
         },
     ];
     return (
         <section className="advantages">
-            <h2>Наші переваги </h2>
+            <h2>{t("title")}</h2>
             <div className="advantages-grid">
                 {cards.map((card) => (
                     <WhyUsCard

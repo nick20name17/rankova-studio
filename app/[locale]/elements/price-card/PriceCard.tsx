@@ -1,4 +1,5 @@
 import { ICard } from "@/app/[locale]/sections/prices/PricesMock";
+import { useTranslations } from "next-intl";
 import { Montserrat, Nunito } from "next/font/google";
 import Image from "next/image";
 import { EnrollBtn } from "../enroll-btn/EnrollBtn";
@@ -18,6 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const PriceCard = ({ card }: Props) => {
+    const t = useTranslations("Prices");
     return (
         <div className="price-card">
             <div className="price-card-header">
@@ -43,7 +45,7 @@ export const PriceCard = ({ card }: Props) => {
                                     <span
                                         className={`lesson-time ${montserrat.className}`}>
                                         {" "}
-                                        ({section.time}хв)
+                                        ({section.time} {t("min")})
                                     </span>
                                 )}
                             </h4>
@@ -72,7 +74,8 @@ export const PriceCard = ({ card }: Props) => {
                                         {item.time && (
                                             <span
                                                 className={`lesson-time ${montserrat.className}`}>
-                                                &nbsp; ({item.time}хв)
+                                                &nbsp; ({item.time}
+                                                {t("min")})
                                             </span>
                                         )}
                                         <div className="price">

@@ -1,15 +1,92 @@
 "use client";
+
 import { Nunito } from "next/font/google";
 import { useState } from "react";
 import "./QA.css";
-import { qaCollection } from "./QAData";
 
 const nunito = Nunito({
     subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
     weight: ["800", "400"],
 });
 
-export const QA = () => {
+interface IQuestion {
+    title: string;
+    listTitle1: string;
+    listTitle2: string;
+    listTitle3: string;
+    listTitle4: string;
+    listTitle5: string;
+    listTitle6: string;
+    listTitle7: string;
+    listTitle8: string;
+    listTitle9: string;
+    listTitle10: string;
+    listDesc1: string;
+    listDesc2: string;
+    listDesc3: string;
+    listDesc4: string;
+    listDesc5: string;
+    listDesc6: string;
+    listDesc7: string;
+    listDesc8: string;
+    listDesc9: string;
+    listDesc10: string;
+}
+
+export const QA = (props: IQuestion) => {
+    const qaCollection = [
+        {
+            id: 1,
+            question: props.listTitle1,
+            answer: props.listDesc1,
+        },
+        {
+            id: 2,
+            question: props.listTitle2,
+            answer: props.listDesc2,
+        },
+        {
+            id: 3,
+            question: props.listTitle3,
+            answer: props.listDesc3,
+        },
+        {
+            id: 4,
+            question: props.listTitle4,
+            answer: props.listDesc4,
+        },
+        {
+            id: 5,
+            question: props.listTitle5,
+            answer: props.listDesc5,
+        },
+        {
+            id: 6,
+            question: props.listTitle6,
+            answer: props.listDesc6,
+        },
+        {
+            id: 7,
+            question: props.listTitle7,
+            answer: props.listDesc7,
+        },
+        {
+            id: 8,
+            question: props.listTitle8,
+            answer: props.listDesc8,
+        },
+        {
+            id: 9,
+            question: props.listTitle9,
+            answer: props.listDesc9,
+        },
+        {
+            id: 10,
+            question: props.listTitle10,
+            answer: props.listDesc10,
+        },
+    ];
+
     const [openQuestion, setOpenQuestion] = useState<undefined | number>(
         undefined
     );
@@ -24,7 +101,7 @@ export const QA = () => {
 
     return (
         <section className="qa" id="qa">
-            <h2>Часті питання</h2>
+            <h2>{props.title}</h2>
             {qaCollection.map((record, i) => (
                 <div key={i} className="qa-block">
                     <div

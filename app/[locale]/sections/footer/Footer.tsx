@@ -9,10 +9,14 @@ import TikTokHover from "@/app/img/tiktok-hover.svg";
 import TikTok from "@/app/img/tiktok.svg";
 import YouTubeHover from "@/app/img/youtube-hover.svg";
 import YouTube from "@/app/img/youtube.svg";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import "./Footer.css";
+
 export const Footer = () => {
+    const t = useTranslations("Footer");
+
     return (
         <footer className="footer">
             <div className="footer-left">
@@ -20,68 +24,66 @@ export const Footer = () => {
                     <Image src={Logo} alt="Ranok" width={200} height={100} />
                 </Link>
 
-                <p className="footer-descr">
-                    Музика - для всіх, а не тільки для обраних.
-                </p>
+                <p className="footer-descr">{t("description")}</p>
 
                 <Link className="footer-link footer-policy" href="/">
-                    Політика конфіденційності
+                    {t("policy")}
                 </Link>
             </div>
 
             <div className="footer-right">
                 <nav className="footer-nav">
-                    <h3 className="footer-title">Навігація</h3>
+                    <h3 className="footer-title">{t("about")}</h3>
                     <ul className="footer-list">
                         <li className="footer-item">
                             <Link href="#about-us" className="footer-item-link">
-                                Про нас
+                                {t("about")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link href="#teachers" className="footer-item-link">
-                                Викладачі
+                                {t("teachers")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link href="#career" className="footer-item-link">
-                                Вакансії
+                                {t("career")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link href="#prices" className="footer-item-link">
-                                Вартість
+                                {t("prices")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link
                                 href="#gift-card"
                                 className="footer-item-link">
-                                Сертифікати
+                                {t("gift")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link href="#qa" className="footer-item-link">
-                                Часті питання
+                                {t("qa")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link href="#reviews" className="footer-item-link">
-                                Відгуки
+                                {t("reviews")}
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Link
                                 href="#contact-info"
                                 className="footer-item-link">
-                                Контакти
+                                {t("contact")}
                             </Link>
                         </li>
                     </ul>
                 </nav>
 
                 <div className="socials-nav">
-                    <h3 className="footer-title">Контакти</h3>
+                    <h3 className="footer-title">{t("contact")}</h3>
                     <div className="socials-list">
                         <Link href="tel:+380978232828" className="footer-phone">
                             +380 (97) 823 28 28
@@ -196,13 +198,13 @@ export const Footer = () => {
                         <Link
                             className="footer-link footer-policy-mobile"
                             href="/">
-                            Політика конфіденційності
+                            {t("policy")}
                         </Link>
                         <Link
                             target="_blank"
                             href="https://www.instagram.com/design_with_anastasiia?igsh=cGlqMHE1NGw1dHp3"
                             className="footer-item footer-item_link">
-                            Дизайн сайту: Anastasia
+                            {t("design")}
                         </Link>
                     </div>
                 </div>

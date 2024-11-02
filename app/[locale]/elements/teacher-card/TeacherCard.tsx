@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { EnrollBtn } from "../enroll-btn/EnrollBtn";
 import "./TeacherCard.css";
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const TeacherCard = (props: Props) => {
+    const t = useTranslations("Teachers");
     return (
         <div className="teacher-card">
             <div className="profile-container">
@@ -41,12 +43,14 @@ export const TeacherCard = (props: Props) => {
                     <EnrollBtn onCard />
                 </div>
                 <p>{props.area}</p>
-                <p>досвід: {props.exp}</p>
+                <p>
+                    {t("exp")}: {props.exp}
+                </p>
             </div>
             <div className="teacher-qa-container">
-                <h4>Що для Вас музика?</h4>
+                <h4>{t("title1")}</h4>
                 <p>{props.aboutMusic}</p>
-                <h4>Що важливе у викладанні:</h4>
+                <h4>{t("title2")}</h4>
                 <p>{props.teaching}</p>
             </div>
         </div>

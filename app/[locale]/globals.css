@@ -15,6 +15,7 @@ body {
     color: #3e3e3e;
     scroll-behavior: smooth;
     scroll-padding: 90px;
+    text-underline-offset: 4px;
 }
 
 h2 {
