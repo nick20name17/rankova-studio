@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { TickerTape } from "./elements/TickerTape/TickerTape";
 import styles from "./page.module.css";
 import { Advantages } from "./sections/advantages/Advantages";
@@ -19,6 +19,8 @@ export default function Home() {
     const t = useTranslations("ContactInfo");
     const s = useTranslations("Story");
     const faq = useTranslations("FAQ");
+
+    const locale = useLocale();
 
     return (
         <>
@@ -59,16 +61,36 @@ export default function Home() {
                     listTitle8={faq("listTitle8")}
                     listTitle9={faq("listTitle9")}
                     listTitle10={faq("listTitle10")}
-                    listDesc1={faq("ListDesc1")}
-                    listDesc2={faq("ListDesc2")}
-                    listDesc3={faq("ListDesc3")}
-                    listDesc4={faq("ListDesc4")}
-                    listDesc5={faq("ListDesc5")}
-                    listDesc6={faq("ListDesc6")}
-                    listDesc7={faq("ListDesc7")}
-                    listDesc8={faq("ListDesc8")}
-                    listDesc9={faq("ListDesc9")}
-                    listDesc10={faq("ListDesc10")}
+                    listDesc1={faq.rich("ListDesc1", {
+                        br: () => <br />,
+                    })}
+                    listDesc2={faq.rich("ListDesc2", {
+                        br: () => <br />,
+                    })}
+                    listDesc3={faq.rich("ListDesc3", {
+                        br: () => <br />,
+                    })}
+                    listDesc4={faq.rich("ListDesc4", {
+                        br: () => <br />,
+                    })}
+                    listDesc5={faq.rich("ListDesc5", {
+                        br: () => <br />,
+                    })}
+                    listDesc6={faq.rich("ListDesc6", {
+                        br: () => <br />,
+                    })}
+                    listDesc7={faq.rich("ListDesc7", {
+                        br: () => <br />,
+                    })}
+                    listDesc8={faq.rich("ListDesc8", {
+                        br: () => <br />,
+                    })}
+                    listDesc9={faq.rich("ListDesc9", {
+                        br: () => <br />,
+                    })}
+                    listDesc10={faq.rich("ListDesc10", {
+                        br: () => <br />,
+                    })}
                 />
                 <Reviews />
                 <Contacts />

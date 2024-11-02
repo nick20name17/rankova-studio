@@ -1,6 +1,7 @@
 .why-us-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 330px));
+    grid-template-rows: 1fr 1fr;
     align-items: start;
     gap: 48px;
 }

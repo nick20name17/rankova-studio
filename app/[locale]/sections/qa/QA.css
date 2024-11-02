@@ -32,6 +32,7 @@
     max-height: 0;
     overflow: hidden;
     white-space: pre-line;
+    font-size: 18px;
     padding-left: 28px;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
     text-align: left;

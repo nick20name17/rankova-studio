@@ -19,9 +19,7 @@ export const LangSelect = () => {
         <select
             onChange={onSelectChange}
             disabled={isPending}
-            defaultValue={localActive}
-            name="lang"
-            id="lang">
+            defaultValue={localActive}>
             <option value="ua">Укр</option>
             <option value="en">Eng</option>
         </select>

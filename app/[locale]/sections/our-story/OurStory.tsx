@@ -4,7 +4,9 @@ import Image from "next/image";
 import { useState } from "react";
 import "./OurStory.css";
 
+import storyEng from "@/app/img/story-eng.png";
 import story from "@/app/img/story.png";
+import { useLocale } from "next-intl";
 
 interface IStoryData {
     title: string;
@@ -27,6 +29,9 @@ export const OurStory = ({
     text3,
 }: IStoryData) => {
     const [contentOpen, setContentOpen] = useState(false);
+    const locale = useLocale();
+
+    const storyImg = locale === "en" ? storyEng : story;
 
     const handleClick = () => {
         setContentOpen(!contentOpen);
@@ -34,7 +39,7 @@ export const OurStory = ({
 
     return (
         <section className="our-story" id="about-us">
-            <Image className="story-img" src={story} alt="Founders" />
+            <Image className="story-img" src={storyImg} alt="Founders" />
             <div className="story-content">
                 <h2 className="story-header">{title}</h2>
                 <h3 className="story-caption">{caption}</h3>

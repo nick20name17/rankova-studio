@@ -1,7 +1,7 @@
 "use client";
 
 import { Nunito } from "next/font/google";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import "./QA.css";
 
 const nunito = Nunito({
@@ -21,16 +21,16 @@ interface IQuestion {
     listTitle8: string;
     listTitle9: string;
     listTitle10: string;
-    listDesc1: string;
-    listDesc2: string;
-    listDesc3: string;
-    listDesc4: string;
-    listDesc5: string;
-    listDesc6: string;
-    listDesc7: string;
-    listDesc8: string;
-    listDesc9: string;
-    listDesc10: string;
+    listDesc1: ReactNode;
+    listDesc2: ReactNode;
+    listDesc3: ReactNode;
+    listDesc4: ReactNode;
+    listDesc5: ReactNode;
+    listDesc6: ReactNode;
+    listDesc7: ReactNode;
+    listDesc8: ReactNode;
+    listDesc9: ReactNode;
+    listDesc10: ReactNode;
 }
 
 export const QA = (props: IQuestion) => {
