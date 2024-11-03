@@ -90,6 +90,7 @@ export default function Home() {
                                 style={{
                                     textDecoration: "underline",
                                 }}
+                                target="_blank"
                                 href="https://n813529.alteg.io/company/764262/record-type?fbclid=PAZXh0bgNhZW0CMTEAAaYbIhfclfdE8PY3IJRZpJ4TXwpLqOEzNmn7sCbY0GSX9kYSQsZNa0g0Gac_aem_v91XHUy7WzNaS1IsqAp8fA&o=">
                                 {chunks}
                             </a>
