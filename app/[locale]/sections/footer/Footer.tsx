@@ -20,7 +20,7 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-left">
-                <Link href="./#">
+                <Link className="footer-logo" href="./#">
                     <Image src={Logo} alt="Ranok" width={200} height={100} />
                 </Link>
 
@@ -203,7 +203,7 @@ export const Footer = () => {
                         <Link
                             target="_blank"
                             href="https://www.instagram.com/design_with_anastasiia?igsh=cGlqMHE1NGw1dHp3"
-                            className="footer-item footer-item_link">
+                            className="footer-design">
                             {t("design")}
                         </Link>
                     </div>

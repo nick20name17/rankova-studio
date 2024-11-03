@@ -7,6 +7,15 @@
     min-width: 296px;
     margin-bottom: 12px;
 }
+
+.teachers-text {
+    color: #434343;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 8px;
+}
+
 .teacher-name-spot {
     position: absolute;
     top: 12px;
@@ -46,8 +55,10 @@
     line-height: 28px;
 }
 .teacher-qa-container h4 {
+    color: #231f20;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 8px;
+    line-height: 28px;
 }
 .teacher-qa-container p {
     margin-bottom: 24px;

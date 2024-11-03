@@ -20,6 +20,7 @@ const montserrat = Montserrat({
 
 export const PriceCard = ({ card }: Props) => {
     const t = useTranslations("Prices");
+
     return (
         <div className="price-card">
             <div className="price-card-header">
@@ -45,7 +46,7 @@ export const PriceCard = ({ card }: Props) => {
                                     <span
                                         className={`lesson-time ${montserrat.className}`}>
                                         {" "}
-                                        ({section.time} {t("min")})
+                                        ({section.time}&nbsp;{t("min")})
                                     </span>
                                 )}
                             </h4>
@@ -57,7 +58,7 @@ export const PriceCard = ({ card }: Props) => {
                         )}
                         {section.price && (
                             <div className="price title-price">
-                                {section.price} &#8372;
+                                {section.price}&nbsp;&#8372;
                             </div>
                         )}
                         <ul>
@@ -74,12 +75,12 @@ export const PriceCard = ({ card }: Props) => {
                                         {item.time && (
                                             <span
                                                 className={`lesson-time ${montserrat.className}`}>
-                                                &nbsp; ({item.time}
+                                                &nbsp;({item.time}&nbsp;
                                                 {t("min")})
                                             </span>
                                         )}
                                         <div className="price">
-                                            {item.price} &#8372;
+                                            {item.price}&nbsp;&#8372;
                                         </div>
                                     </li>
                                 ))}

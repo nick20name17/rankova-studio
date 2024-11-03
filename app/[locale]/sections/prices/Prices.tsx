@@ -372,7 +372,7 @@ export const Prices = () => {
                     list: true,
                     items: [
                         {
-                            item: t("price6_section1_caption"),
+                            item: t("price6_section1_item1"),
                             time: 30,
                             price: 250,
                         },

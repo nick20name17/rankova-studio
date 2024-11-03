@@ -70,4 +70,8 @@
     .slider-header-container {
         margin-left: 0;
     }
+
+    .slides-container {
+        gap: 32px;
+    }
 }

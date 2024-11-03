@@ -49,9 +49,9 @@ export const TeacherCard = (props: Props) => {
             </div>
             <div className="teacher-qa-container">
                 <h4>{t("title1")}</h4>
-                <p>{props.aboutMusic}</p>
+                <p className="teachers-text">{props.aboutMusic}</p>
                 <h4>{t("title2")}</h4>
-                <p>{props.teaching}</p>
+                <p className="teachers-text">{props.teaching}</p>
             </div>
         </div>
     );

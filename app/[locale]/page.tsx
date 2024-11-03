@@ -1,4 +1,4 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import { TickerTape } from "./elements/TickerTape/TickerTape";
 import styles from "./page.module.css";
 import { Advantages } from "./sections/advantages/Advantages";
@@ -19,8 +19,6 @@ export default function Home() {
     const t = useTranslations("ContactInfo");
     const s = useTranslations("Story");
     const faq = useTranslations("FAQ");
-
-    const locale = useLocale();
 
     return (
         <>
@@ -87,6 +85,15 @@ export default function Home() {
                     })}
                     listDesc9={faq.rich("ListDesc9", {
                         br: () => <br />,
+                        link: (chunks) => (
+                            <a
+                                style={{
+                                    textDecoration: "underline",
+                                }}
+                                href="https://n813529.alteg.io/company/764262/record-type?fbclid=PAZXh0bgNhZW0CMTEAAaYbIhfclfdE8PY3IJRZpJ4TXwpLqOEzNmn7sCbY0GSX9kYSQsZNa0g0Gac_aem_v91XHUy7WzNaS1IsqAp8fA&o=">
+                                {chunks}
+                            </a>
+                        ),
                     })}
                     listDesc10={faq.rich("ListDesc10", {
                         br: () => <br />,

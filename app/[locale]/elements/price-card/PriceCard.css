@@ -1,74 +1,75 @@
 .price-card-header {
-  display: flex;
-  line-height: 40px;
-  font-size: 32px;
-  align-items: center;
-  justify-content: center;
-  height: 140px;
+    display: flex;
+    line-height: 40px;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
 }
 .price-card {
-  border: 1px solid #c0c0c0;
-  min-width: 412px;
-  border-radius: 24px;
-  height: fit-content;
+    border: 1px solid #c0c0c0;
+    min-width: 412px;
+    border-radius: 24px;
+    height: fit-content;
 }
 
 .price-card h4 {
-  font-weight: 800;
+    font-weight: 800;
 }
 .price-card-info {
-  padding: 0 32px;
+    padding: 0 32px;
 }
 
 .list {
-  list-style-type: disc;
-  margin-left: 16px;
-  position: relative;
+    list-style-type: disc;
+    margin-left: 16px;
+    position: relative;
 }
 .btn-container {
-  padding: 32px 0;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+    padding: 32px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 .list::before {
-  content: '•';
-  position: absolute;
-  left: -16px;
-  font-size: 16px;
-  color: black;
+    content: "•";
+    position: absolute;
+    left: -16px;
+    font-size: 16px;
+    color: black;
 }
 .price-item {
-  display: flex;
+    display: flex;
 
-  font-size: 18px;
-  line-height: 28px;
+    font-size: 18px;
+    line-height: 28px;
 }
 .section-title,
 .price {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 800;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 800;
 }
 .with-gap {
-  margin-top: 32px;
+    margin-top: 32px;
 }
 
-.section-title, .title-price {
-  margin-top: 12px;
+.section-title,
+.title-price {
+    margin-top: 12px;
 }
 .lesson-time {
-  font-size: 14px;
-  color: #838181;
+    font-size: 14px;
+    color: #838181;
 }
 .price {
-  flex-grow: 1;
-  text-align: end;
+    flex-grow: 1;
+    text-align: end;
 }
 .caption {
-  font-size: 18px;
-  line-height: 28px;
-  color: #838181;
+    font-size: 18px;
+    line-height: 28px;
+    color: #838181;
 }
 .price-section.flex {
     display: flex;
@@ -78,4 +79,24 @@
     width: 70%;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .price-card-info {
+        padding: 0 24px;
+    }
+
+    .price-card {
+        min-width: 340px;
+    }
+}
+
+@media (max-width: 475px) {
+    .price-card-info {
+        padding: 0 20px;
+    }
+
+    .price-card {
+        min-width: 325px;
+    }
 }

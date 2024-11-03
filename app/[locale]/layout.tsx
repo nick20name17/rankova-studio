@@ -23,8 +23,8 @@ export async function generateMetadata({
         title: t("title"),
         description: t("description"),
         icons: {
-            icon: "/favicon.svg",
             shortcut: "/favicon.svg",
+            icon: "/favicon.svg",
         },
     };
 }
@@ -43,7 +43,7 @@ export default async function LocaleLayout({
     const t = await getTranslations("Nav");
 
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body className={`${comfortaa.className}`}>
                 <Nav
                     description={t("description")}
