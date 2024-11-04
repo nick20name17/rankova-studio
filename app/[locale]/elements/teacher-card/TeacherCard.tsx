@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { EnrollBtn } from "../enroll-btn/EnrollBtn";
 import "./TeacherCard.css";
 
 type Props = {
     name: string;
-    photo: string;
+    photo: StaticImageData;
     area: string;
     exp: string;
     aboutMusic: string;
@@ -22,8 +22,6 @@ export const TeacherCard = (props: Props) => {
                         className="teacher-photo"
                         src={props.photo}
                         alt={props.name}
-                        width={296}
-                        height={357}
                     />
                     <span className="teacher-card-name">{props.name}</span>
                     <svg

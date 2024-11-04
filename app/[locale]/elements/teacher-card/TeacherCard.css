@@ -1,10 +1,9 @@
 .teacher-card {
     display: flex;
-    min-width: 580px;
+    min-width: 680px;
 }
 .teacher-photo-container {
     position: relative;
-    min-width: 296px;
     margin-bottom: 12px;
 }
 
@@ -64,10 +63,16 @@
     margin-bottom: 24px;
 }
 
+@media (max-width: 991px) {
+    .teacher-card {
+        min-width: 580px;
+    }
+}
+
 @media (max-width: 768px) {
     .teacher-card {
         flex-direction: column;
-        min-width: 300px;
+        min-width: 320px;
     }
 
     .teacher-qa-container {

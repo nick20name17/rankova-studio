@@ -30,7 +30,7 @@
     overflow-x: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    gap: 54px;
+    gap: 48px;
     scroll-snap-type: x mandatory;
 }
 .slides-container::-webkit-scrollbar {
