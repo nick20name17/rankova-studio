@@ -57,10 +57,13 @@
     flex-shrink: 0;
     mix-blend-mode: multiply;
     transition: all 0.3s;
+    -webkit-filter: grayscale(100%) brightness(0);
+    filter: grayscale(100%) brightness(0);
 }
 
 .nav-logo:hover {
-    filter: grayscale(0);
+    -webkit-filter: grayscale(0) brightness(1);
+    filter: grayscale(0) brightness(1);
 }
 
 .nav-menu {

@@ -2,7 +2,7 @@ import FacebookHover from "@/app/img/facebook-hover.svg";
 import Facebook from "@/app/img/facebook.svg";
 import InstHover from "@/app/img/inst-hover.svg";
 import Inst from "@/app/img/inst.svg";
-import Logo from "@/app/img/logo.png";
+import Logo from "@/app/img/logo.svg";
 import TelegramHover from "@/app/img/telegram-hover.svg";
 import Telegram from "@/app/img/telegram.svg";
 import TikTokHover from "@/app/img/tiktok-hover.svg";
