@@ -5,6 +5,7 @@
     max-width: 44px;
     min-height: 44px;
     max-height: 44px;
+    position: relative;
 }
 .icon-box {
     display: inline-block;

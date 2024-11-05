@@ -1,3 +1,60 @@
+.icon-container a {
+    max-height: 0;
+    max-width: fit-content;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+    position: relative;
+}
+.icon-box {
+    display: inline-block;
+    position: relative;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+.social-icon-hover {
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container:hover img.social-icon {
+    display: none;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container:hover .social-icon-hover {
+    display: inline-block;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+
+.icon-container img {
+    pointer-events: bounding-box;
+    min-width: 44px;
+    max-width: 44px;
+    min-height: 44px;
+    max-height: 44px;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    gap: 44px;
+    padding: 54px 0;
+}
+
 .footer {
     margin-top: 136px;
     gap: 48px 24px;

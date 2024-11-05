@@ -58,36 +58,6 @@
     text-decoration: underline;
     padding-top: 4px;
 }
-.founder-name {
-    color: #111111;
-    line-height: 40px;
-    font-size: 32px;
-    font-weight: 700;
-    position: absolute;
-    z-index: 2;
-}
-.oleksiy {
-    top: 44px;
-    left: 18px;
-}
-.maks-bkgr {
-    top: 133px;
-    position: absolute;
-    left: 379px;
-}
-.yana-bkgr {
-    top: 400px;
-    position: absolute;
-    left: 444px;
-}
-.maks {
-    top: 160px;
-    left: 400px;
-}
-.yana {
-    top: 416px;
-    left: 468px;
-}
 
 @media (max-width: 991px) {
     .story-img {

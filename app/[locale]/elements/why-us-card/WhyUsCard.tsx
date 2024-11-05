@@ -16,7 +16,7 @@ const nunito = Nunito({
 export const WhyUsCard = ({ icon, title, text }: Props) => {
     return (
         <div className="why-us-card">
-            <div className="icon-container">
+            <div className="card-icon-container">
                 <Image src={icon} width={52} height={52} alt="icon" />
                 <svg
                     className="card-spot"
