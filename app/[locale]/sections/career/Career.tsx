@@ -38,7 +38,7 @@ export const Career = () => {
                 </div>
                 <Link
                     href={
-                        "https://docs.google.com/forms/d/e/1FAIpQLSdo0W2k9JKpuigvQJ5X5jHBmr1QFqNo6OQtdhbfQnhgJzA8Qw/viewform"
+                        "https://docs.google.com/forms/d/e/1FAIpQLSdsMVH2E9Xu6gYGB1gmVqC-ZhJbdA6k417PlQ6V6B1owDSlTg/viewform"
                     }
                     target="_blank">
                     <button className="black enroll-btn fill-form-btn">
