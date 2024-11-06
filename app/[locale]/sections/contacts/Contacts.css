@@ -61,7 +61,7 @@
 .google-map {
     flex: 2;
     height: 470px;
-    border-radius: 76px;
+    border-radius: 24px;
 }
 .contact-content {
     display: flex;

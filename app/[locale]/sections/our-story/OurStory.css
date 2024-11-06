@@ -9,8 +9,54 @@
     margin-top: 80px;
     padding-right: 80px;
 }
+
+.story-img-container {
+    position: relative;
+    flex-shrink: 0;
+}
+
 .story-img {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.teacher-name {
+    position: absolute;
+    font-size: 30px;
+    z-index: 10;
+    font-weight: 700;
+    color: #111;
+}
+
+.name1 {
+    top: 35px;
+    left: 11px;
+}
+.name2 {
+    top: 115px;
+    right: 30%;
+}
+
+.name2 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.name3 span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.name3 {
+    bottom: 140px;
+    right: 23%;
 }
 
 .story-part2 {
@@ -60,7 +106,7 @@
 }
 
 @media (max-width: 991px) {
-    .story-img {
+    .story-img-container {
         width: 85%;
     }
     .story-content {
@@ -78,11 +124,49 @@
 
 @media (max-width: 768px) {
     .story-caption {
-        font-size: 18px;
+        font-size: 18px !important;
     }
 
     .story-content {
         padding-right: 20px;
         padding-left: 20px;
+    }
+
+    .teacher-name {
+        font-size: 22px;
+    }
+
+    .name2 {
+        top: 80px;
+    }
+
+    .name2 svg {
+        width: 90px;
+    }
+
+    .name3 {
+        bottom: 90px;
+    }
+
+    .name3 svg {
+        width: 90px;
+    }
+}
+
+@media (max-width: 600px) {
+    .name2 svg {
+        width: 65px;
+    }
+    .name3 svg {
+        width: 65px;
+    }
+    .teacher-name {
+        font-size: 17px;
+    }
+    .name2 {
+        top: 40px;
+    }
+    .name3 {
+        bottom: 50px;
     }
 }

@@ -100,7 +100,10 @@ export const Nav = (props: INavItem) => {
                 </Link>
                 <div className="socials">
                     <div className="icon-container">
-                        <Link className="" href={""}>
+                        <Link
+                            className=""
+                            target="_blank"
+                            href={"https://www.instagram.com/rankova.studio/"}>
                             <div className="icon-box">
                                 <Image
                                     className="social-icon"
@@ -121,7 +124,10 @@ export const Nav = (props: INavItem) => {
                         </Link>
                     </div>
                     <div className="icon-container">
-                        <Link className="" href={""}>
+                        <Link
+                            className=""
+                            target="_blank"
+                            href={"https://www.facebook.com/rankova.studio"}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -142,7 +148,10 @@ export const Nav = (props: INavItem) => {
                         </Link>
                     </div>
                     <div className="icon-container">
-                        <Link className="" href={""}>
+                        <Link
+                            className=""
+                            target="_blank"
+                            href={"https://www.youtube.com/@rankovastudio"}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -163,7 +172,12 @@ export const Nav = (props: INavItem) => {
                         </Link>
                     </div>
                     <div className="icon-container">
-                        <Link className="" href={""}>
+                        <Link
+                            className=""
+                            target="_blank"
+                            href={
+                                "https://www.tiktok.com/@rankova.studio?_t=8pBtWy7l2Gc&_r=1"
+                            }>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -184,7 +198,10 @@ export const Nav = (props: INavItem) => {
                         </Link>
                     </div>
                     <div className="icon-container">
-                        <Link className="" href={""}>
+                        <Link
+                            className=""
+                            target="_blank"
+                            href={"https://t.me/rankovastudio"}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"

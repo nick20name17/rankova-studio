@@ -1,5 +1,5 @@
 import { EnrollBtn } from "@/app/[locale]/elements/enroll-btn/EnrollBtn";
-import background from "@/app/img/header-img.png";
+import background from "@/app/img/Frame.png";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import "./Header.css";
@@ -11,7 +11,7 @@ export const Header = () => {
             style={{
                 backgroundImage: `url(${background.src})`,
             }}>
-            <Image className="header-img" src={background} alt="bg" />
+            <Image priority className="header-img" src={background} alt="bg" />
 
             <div className="header-content">
                 <svg

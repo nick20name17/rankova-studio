@@ -35,6 +35,9 @@ export default function Home() {
                     text1={s("text1")}
                     text2={s("text2")}
                     text3={s("text3")}
+                    name1={s("name1")}
+                    name2={s("name2")}
+                    name3={s("name3")}
                 />
                 <Advantages />
                 <Teachers />
