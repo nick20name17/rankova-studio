@@ -40,12 +40,9 @@
     padding-right: 1.75rem;
 }
 
-.animate-marquee {
-    animation: marquee 25s linear infinite;
-}
-
-.animate-marquee2 {
-    animation: marquee2 25s linear infinite;
+.moving-text {
+    display: inline-block;
+    animation: marquee 5s linear infinite;
 }
 
 /* Keyframes for marquee animation */
@@ -53,16 +50,8 @@
     from {
         transform: translateX(0);
     }
+
     to {
         transform: translateX(-100%);
-    }
-}
-
-@keyframes marquee2 {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
     }
 }

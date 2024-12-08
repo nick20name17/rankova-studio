@@ -9,21 +9,12 @@ export const TickerTape = () => {
                 {Array(10)
                     .fill(0)
                     .map((_, index) => (
-                        <span key={index} className="px-7">
+                        <span key={index} className="px-7 moving-text">
                             {t("title")}
                         </span>
                     ))}
             </div>
 
-            <div className="animate-marquee2 absolute top-0 whitespace-nowrap py-2">
-                {Array(10)
-                    .fill(0)
-                    .map((_, index) => (
-                        <span key={index} className="px-7">
-                            {t("title")}
-                        </span>
-                    ))}
-            </div>
         </div>
     );
 };
