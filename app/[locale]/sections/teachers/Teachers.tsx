@@ -1,6 +1,5 @@
 import { Slider } from "@/app/[locale]/elements/slider/Slider";
 import { TeacherCard } from "@/app/[locale]/elements/teacher-card/TeacherCard";
-import Illia from "@/app/img/illya.png";
 import Nadiia from "@/app/img/nadiia.png";
 import Oksana2 from "@/app/img/okasana2.png";
 import Oksana from "@/app/img/oksana.png";
@@ -55,14 +54,6 @@ export const Teachers = () => {
             photo: Viktoriia,
             aboutMusic: t("aboutMusic5"),
             teaching: t("teaching5"),
-        },
-        {
-            name: t("name6"),
-            area: t("area6"),
-            experience: t("experience6"),
-            photo: Illia,
-            aboutMusic: t("aboutMusic6"),
-            teaching: t("teaching6"),
         },
         {
             name: t("name7"),
