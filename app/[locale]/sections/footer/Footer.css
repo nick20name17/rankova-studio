@@ -7,6 +7,7 @@
     max-height: 44px;
     position: relative;
 }
+
 .icon-box {
     display: inline-block;
     position: relative;
@@ -15,6 +16,7 @@
     min-height: 44px;
     max-height: 44px;
 }
+
 .social-icon-hover {
     display: none;
     position: absolute;
@@ -48,6 +50,7 @@
     min-height: 44px;
     max-height: 44px;
 }
+
 .socials {
     display: flex;
     justify-content: space-between;
@@ -73,13 +76,6 @@
     flex-shrink: 0;
     mix-blend-mode: multiply;
     transition: all 0.3s;
-    -webkit-filter: grayscale(100%) brightness(0);
-    filter: grayscale(100%) brightness(0);
-}
-
-.footer-logo:hover {
-    -webkit-filter: grayscale(0) brightness(1);
-    filter: grayscale(0) brightness(1);
 }
 
 .footer-policy-mobile {
@@ -137,6 +133,7 @@
 .footer-item:hover {
     color: #ffdf18;
 }
+
 .footer-item_link {
     color: #231f20;
 }
@@ -172,7 +169,8 @@
     display: block;
     font-size: 18px;
     font-weight: 500;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
+    /* 133.333% */
     letter-spacing: -0.36px;
     transition: all 0.3s;
 }
@@ -254,6 +252,7 @@
         justify-content: center;
         gap: 28px;
     }
+
     .footer-left {
         width: 100%;
         align-items: center;
