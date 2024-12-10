@@ -14,9 +14,8 @@ import YouTube from "@/app/img/youtube.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { LogoSvg } from "@/app/[locale]/elements/logo-svg/LogoSvg"
 import "./Nav.css";
-
-import Logo from "@/app/img/logo.svg";
 
 interface INavItem {
     btn: string;
@@ -41,7 +40,7 @@ export const Nav = (props: INavItem) => {
     return (
         <nav className="nav">
             <Link className="nav-logo" href="./#">
-                <Image priority src={Logo} alt="Ranok" />
+                <LogoSvg />
             </Link>
             <div className={`nav-menu ${isOpen ? "open" : ""}`}>
                 <p className="nav-descr">{props.description}</p>

@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 20px;
-    padding: 20px 80px;
+    padding: 16px 80px;
 
     background-color: #fcfcfc;
     z-index: 1000;
@@ -57,8 +57,6 @@
     flex-shrink: 0;
     mix-blend-mode: multiply;
     transition: all 0.1s ease-in-out;
-    -webkit-filter: grayscale(100%) brightness(0);
-    filter: grayscale(100%) brightness(0);
 }
 
 .nav-logo:hover {

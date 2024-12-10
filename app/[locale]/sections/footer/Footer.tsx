@@ -13,6 +13,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import "./Footer.css";
+import { LogoSvg } from "../../elements/logo-svg/LogoSvg";
 
 export const Footer = () => {
     const t = useTranslations("Footer");
@@ -21,7 +22,7 @@ export const Footer = () => {
         <footer className="footer">
             <div className="footer-left">
                 <Link className="footer-logo" href="./#">
-                    <Image src={Logo} alt="Ranok" width={200} height={100} />
+                    <LogoSvg />
                 </Link>
 
                 <p className="footer-descr">{t("description")}</p>
