@@ -10,7 +10,7 @@ export const Gift = () => {
     return (
         <section className="gift-section" id="gift-card">
             <div className="gift">
-                <Image className="gift-card" src={giftCards} alt="gift card" />
+                <Image className="gift-card" src={giftCards} alt="gift card" width={477} height={324} />
 
                 <div className="gift-card-content">
                     <h2 className="gift-card-title">{t("title")}</h2>
