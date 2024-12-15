@@ -23,9 +23,6 @@
     flex-direction: column;
     width: 50%;
 }
-.buy-btn {
-    margin-top: 42px;
-}
 
 .buy-btn_mobile {
     display: none;
@@ -38,6 +35,14 @@
 .buy-btn_mobile:hover {
     background-color: #ffdf18;
     color: #231f20;
+}
+
+.enroll-link {
+    display: inline-block;
+    width: min-content;
+    height: min-content;
+    margin-top: 42px;
+    border-radius: 32px;
 }
 
 @media (max-width: 991px) {
