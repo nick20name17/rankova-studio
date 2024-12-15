@@ -33,6 +33,7 @@
     top: 35px;
     left: 11px;
 }
+
 .name2 {
     top: 115px;
     right: 30%;
@@ -82,22 +83,27 @@
 .our-story h2 {
     margin-bottom: 54px;
 }
+
 .our-story h3 {
     font-size: 24px;
     line-height: 32px;
     font-weight: 500;
 }
+
 .story-part1 {
     margin-bottom: 32px;
 }
+
 .story-part1,
 .story-part2 {
     font-size: 14px;
     line-height: 21px;
 }
+
 .story-caption {
     padding-bottom: 12px;
 }
+
 .toggle-story-btn {
     line-height: 32px;
     font-size: 18px;
@@ -109,10 +115,12 @@
     .story-img-container {
         width: 85%;
     }
+
     .story-content {
         padding-right: 32px;
         padding-left: 32px;
     }
+
     .our-story {
         flex-direction: column-reverse;
     }
@@ -157,16 +165,30 @@
     .name2 svg {
         width: 65px;
     }
+
     .name3 svg {
         width: 65px;
     }
+
     .teacher-name {
         font-size: 17px;
     }
+
     .name2 {
         top: 40px;
     }
+
     .name3 {
         bottom: 50px;
+    }
+}
+
+@media (max-width: 460px) {
+    .teacher-name {
+        font-size: 14px;
+    }
+
+    .name1 {
+        left: 1%;
     }
 }
