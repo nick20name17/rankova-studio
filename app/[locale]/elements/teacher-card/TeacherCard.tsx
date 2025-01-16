@@ -1,11 +1,11 @@
 import { useTranslations } from "next-intl";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { EnrollBtn } from "../enroll-btn/EnrollBtn";
 import "./TeacherCard.css";
 
 type Props = {
     name: string;
-    photo: StaticImageData;
+    photo: string;
     area: string;
     exp: string;
     aboutMusic: string;
@@ -21,6 +21,8 @@ export const TeacherCard = (props: Props) => {
                     <Image
                         className="teacher-photo"
                         src={props.photo}
+                        width={296}
+                        height={357}
                         alt={props.name}
                     />
                     <span className="teacher-card-name">{props.name}</span>
