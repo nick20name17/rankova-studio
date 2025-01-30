@@ -2,10 +2,41 @@ import { Slider } from "@/app/[locale]/elements/slider/Slider";
 import { TeacherCard } from "@/app/[locale]/elements/teacher-card/TeacherCard";
 import { getTeachers } from "@/app/actions";
 import { Teacher } from "@/app/types/teachers";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+
+function getYearPlural(years: number, isEng: boolean = false) {
+    if (isEng) {
+        return years === 1 ? "year" : "years";
+    }
+
+    // Get the last digit and last two digits for Ukrainian pluralization
+    const lastDigit = years % 10;
+    const lastTwoDigits = years % 100;
+
+    // Special case for teens (11-14)
+    if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+        return "років";
+    }
+
+    // Handle other cases based on the last digit
+    switch (lastDigit) {
+        case 1:
+            return "рік";
+        case 2:
+        case 3:
+        case 4:
+            return "роки";
+        default:
+            return "років";
+    }
+}
 
 export const Teachers = async () => {
     const t = await getTranslations("Teachers");
+
+    const locale = await getLocale();
+
+    const isEng = locale === "en";
 
     const teachers = (await getTeachers()) as Teacher[];
 
@@ -86,19 +117,28 @@ export const Teachers = async () => {
 
     return (
         <section id="teachers">
-            <div></div>
             <Slider header={t("title")}>
-                {teachers.map((teacher) => (
-                    <TeacherCard
-                        key={teacher.id}
-                        name={teacher.Name}
-                        photo={teacher.Photo[0].url}
-                        area={teacher.area}
-                        exp={teacher.exp}
-                        aboutMusic={teacher.music}
-                        teaching={teacher.teaching}
-                    />
-                ))}
+                {teachers.map((teacher) => {
+                    const year = getYearPlural(+teacher.exp);
+                    const engYear = getYearPlural(+teacher.exp, true);
+                    return (
+                        <TeacherCard
+                            key={teacher.id}
+                            name={isEng ? teacher["name(eng)"] : teacher.name}
+                            photo={teacher.photo[0].url}
+                            area={isEng ? teacher["area(eng)"] : teacher.area}
+                            exp={`${teacher.exp} ${isEng ? engYear : year}`}
+                            aboutMusic={
+                                isEng ? teacher["music(eng)"] : teacher.music
+                            }
+                            teaching={
+                                isEng
+                                    ? teacher["teaching(eng)"]
+                                    : teacher.teaching
+                            }
+                        />
+                    );
+                })}
             </Slider>
         </section>
     );

@@ -1,11 +1,22 @@
 export interface Teacher {
     id: string;
     exp: string;
-    Name: string;
-    Photo: Photo[];
+    name: string;
+    "name(eng)": string;
+    photo: Photo[];
     area: string;
+    "area(eng)": string;
     teaching: string;
+    "teaching(eng)": string;
     music: string;
+    "music(eng)": string;
+}
+
+export interface Price {
+    id: string;
+    title: string;
+    icon: Photo[];
+    content: string;
 }
 
 export interface Photo {

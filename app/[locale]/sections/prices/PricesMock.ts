@@ -4,7 +4,7 @@ interface IItem {
     price: number;
 }
 
-interface ISection {
+export interface ISection {
     title?: string;
     list: boolean;
     gap?: boolean;
