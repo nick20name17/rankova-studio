@@ -1,3 +1,4 @@
+
 export interface Teacher {
     id: string;
     exp: string;
@@ -16,7 +17,7 @@ export interface Price {
     id: string;
     title: string;
     icon: Photo[];
-    content: string;
+    sections: string[];
 }
 
 export interface Photo {

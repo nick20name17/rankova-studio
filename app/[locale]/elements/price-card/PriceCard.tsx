@@ -1,25 +1,26 @@
-import { ICard } from "@/app/[locale]/sections/prices/PricesMock";
-import { useTranslations } from "next-intl";
-import { Montserrat, Nunito } from "next/font/google";
-import Image from "next/image";
-import { EnrollBtn } from "../enroll-btn/EnrollBtn";
-import "./PriceCard.css";
+import { ICard } from '@/app/[locale]/sections/prices/PricesMock';
+import { useTranslations } from 'next-intl';
+import { Montserrat, Nunito } from 'next/font/google';
+import Image from 'next/image';
+import { EnrollBtn } from '../enroll-btn/EnrollBtn';
+import './PriceCard.css';
 
 type Props = {
     card: ICard;
+    isEng: boolean;
 };
 
 const nunito = Nunito({
-    subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
-    weight: ["800", "400"],
+    subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],
+    weight: ['800', '400'],
 });
 const montserrat = Montserrat({
-    subsets: ["cyrillic", "cyrillic-ext", "latin", "latin-ext"],
-    weight: ["400"],
+    subsets: ['cyrillic', 'cyrillic-ext', 'latin', 'latin-ext'],
+    weight: ['400'],
 });
 
-export const PriceCard = ({ card }: Props) => {
-    const t = useTranslations("Prices");
+export const PriceCard = ({ card, isEng }: Props) => {
+    const t = useTranslations('Prices');
 
     return (
         <div className="price-card">
@@ -30,30 +31,30 @@ export const PriceCard = ({ card }: Props) => {
                     width={80}
                     height={80}
                 />
-                <h3>{card.title}</h3>
+                <h3> {isEng ? card['title(eng)'] : card.title}</h3>
             </div>
             <div className={`price-card-info ${nunito.className}`}>
-                {card.sections.map((section, i) => (
+                {card.sections?.map((section, i) => (
                     <div
                         key={i}
                         className={`price-section ${
-                            section.gap ? "with-gap" : ""
-                        } ${section.price ? "flex" : ""}`}>
+                            section.gap ? 'with-gap' : ''
+                        } ${section.price ? 'flex' : ''}`}>
                         {section.title && (
                             <h4 className="section-title">
-                                {section.title}
+                                {isEng ? section['title(eng)'] : section.title}
                                 {section.time && (
                                     <span
                                         className={`lesson-time ${montserrat.className}`}>
-                                        {" "}
-                                        ({section.time}&nbsp;{t("min")})
+                                        {' '}
+                                        ({section.time}&nbsp;{t('min')})
                                     </span>
                                 )}
                             </h4>
                         )}
                         {section.caption && (
                             <p className={`caption ${nunito.className}`}>
-                                {section.caption}
+                                {isEng ? section['caption(eng)'] : section.caption}
                             </p>
                         )}
                         {section.price && (
@@ -67,16 +68,16 @@ export const PriceCard = ({ card }: Props) => {
                                     <li
                                         key={i + index}
                                         className={`price-item ${
-                                            section.list ? "list" : ""
+                                            section.list ? 'list' : ''
                                         }`}>
                                         <span className="item-title">
-                                            {item.item}
+                                            {isEng ? item['title(eng)'] : item.title}
                                         </span>
                                         {item.time && (
                                             <span
                                                 className={`lesson-time ${montserrat.className}`}>
                                                 &nbsp;({item.time}&nbsp;
-                                                {t("min")})
+                                                {t('min')})
                                             </span>
                                         )}
                                         <div className="price">
