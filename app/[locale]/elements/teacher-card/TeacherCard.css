@@ -25,7 +25,7 @@
 .teacher-photo {
     min-width: 296px;
     max-width: 296px;
-
+    border-radius: 46px;
 }
 
 .profile-container {

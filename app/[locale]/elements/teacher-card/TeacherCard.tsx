@@ -1,7 +1,7 @@
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import { EnrollBtn } from "../enroll-btn/EnrollBtn";
-import "./TeacherCard.css";
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import { EnrollBtn } from '../enroll-btn/EnrollBtn';
+import './TeacherCard.css';
 
 type Props = {
     name: string;
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const TeacherCard = (props: Props) => {
-    const t = useTranslations("Teachers");
+    const t = useTranslations('Teachers');
     return (
         <div className="teacher-card">
             <div className="profile-container">
@@ -44,13 +44,13 @@ export const TeacherCard = (props: Props) => {
                 </div>
                 <p>{props.area}</p>
                 <p>
-                    {t("exp")}: {props.exp}
+                    {t('exp')}: {props.exp}
                 </p>
             </div>
             <div className="teacher-qa-container">
-                <h4>{t("title1")}</h4>
+                <h4>{t('title1')}</h4>
                 <p className="teachers-text">{props.aboutMusic}</p>
-                <h4>{t("title2")}</h4>
+                <h4>{t('title2')}</h4>
                 <p className="teachers-text">{props.teaching}</p>
             </div>
         </div>
