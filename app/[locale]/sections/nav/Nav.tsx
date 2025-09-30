@@ -1,48 +1,50 @@
-"use client";
+'use client'
 
-import { LangSelect } from "@/app/[locale]/elements/lang-select/LangSelect";
-import FacebookHover from "@/app/img/facebook-hover.svg";
-import Facebook from "@/app/img/facebook.svg";
-import InstHover from "@/app/img/inst-hover.svg";
-import Inst from "@/app/img/inst.svg";
-import TelegramHover from "@/app/img/telegram-hover.svg";
-import Telegram from "@/app/img/telegram.svg";
-import TikTokHover from "@/app/img/tiktok-hover.svg";
-import TikTok from "@/app/img/tiktok.svg";
-import YouTubeHover from "@/app/img/youtube-hover.svg";
-import YouTube from "@/app/img/youtube.svg";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { LogoSvg } from "@/app/[locale]/elements/logo-svg/LogoSvg"
-import "./Nav.css";
+import { LangSelect } from '@/app/[locale]/elements/lang-select/LangSelect'
+import { LogoSvg } from '@/app/[locale]/elements/logo-svg/LogoSvg'
+import FacebookHover from '@/app/img/facebook-hover.svg'
+import Facebook from '@/app/img/facebook.svg'
+import InstHover from '@/app/img/inst-hover.svg'
+import Inst from '@/app/img/inst.svg'
+import TelegramHover from '@/app/img/telegram-hover.svg'
+import Telegram from '@/app/img/telegram.svg'
+import TikTokHover from '@/app/img/tiktok-hover.svg'
+import TikTok from '@/app/img/tiktok.svg'
+import YouTubeHover from '@/app/img/youtube-hover.svg'
+import YouTube from '@/app/img/youtube.svg'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import './Nav.css'
 
 interface INavItem {
-    btn: string;
-    teachers: string;
-    career: string;
-    prices: string;
-    gift: string;
-    qa: string;
-    reviews: string;
-    contact: string;
-    about: string;
-    description: string;
+    btn: string
+    teachers: string
+    career: string
+    prices: string
+    gift: string
+    qa: string
+    reviews: string
+    contact: string
+    about: string
+    description: string
 }
 
 export const Nav = (props: INavItem) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
+        setIsOpen(!isOpen)
+    }
 
     return (
         <nav className="nav">
-            <Link className="nav-logo" href="./#">
+            <Link
+                className="nav-logo"
+                href="./#">
                 <LogoSvg />
             </Link>
-            <div className={`nav-menu ${isOpen ? "open" : ""}`}>
+            <div className={`nav-menu ${isOpen ? 'open' : ''}`}>
                 <p className="nav-descr">{props.description}</p>
                 <Link
                     onClick={toggleMenu}
@@ -63,7 +65,10 @@ export const Nav = (props: INavItem) => {
                     className="nav-link nav-link-mobile">
                     {props.career}
                 </Link>
-                <Link onClick={toggleMenu} href="#prices" className="nav-link">
+                <Link
+                    onClick={toggleMenu}
+                    href="#prices"
+                    className="nav-link">
                     {props.prices}
                 </Link>
                 <Link
@@ -77,7 +82,7 @@ export const Nav = (props: INavItem) => {
                     href="#qa"
                     className="nav-link nav-link-mobile">
                     {props.qa}
-                </Link>{" "}
+                </Link>{' '}
                 <Link
                     onClick={toggleMenu}
                     href="#reviews"
@@ -102,7 +107,7 @@ export const Nav = (props: INavItem) => {
                         <Link
                             className=""
                             target="_blank"
-                            href={"https://www.instagram.com/rankova.studio/"}>
+                            href={'https://www.instagram.com/rankova.studio/'}>
                             <div className="icon-box">
                                 <Image
                                     className="social-icon"
@@ -126,7 +131,7 @@ export const Nav = (props: INavItem) => {
                         <Link
                             className=""
                             target="_blank"
-                            href={"https://www.facebook.com/rankova.studio"}>
+                            href={'https://www.facebook.com/rankova.studio'}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -150,7 +155,7 @@ export const Nav = (props: INavItem) => {
                         <Link
                             className=""
                             target="_blank"
-                            href={"https://www.youtube.com/@rankovastudio"}>
+                            href={'https://www.youtube.com/@rankovastudio'}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -175,7 +180,7 @@ export const Nav = (props: INavItem) => {
                             className=""
                             target="_blank"
                             href={
-                                "https://www.tiktok.com/@rankova.studio?_t=8pBtWy7l2Gc&_r=1"
+                                'https://www.tiktok.com/@rankova.studio?_t=8pBtWy7l2Gc&_r=1'
                             }>
                             <div className="social-icon icon-box">
                                 <Image
@@ -200,7 +205,7 @@ export const Nav = (props: INavItem) => {
                         <Link
                             className=""
                             target="_blank"
-                            href={"https://t.me/rankovastudio"}>
+                            href={'https://t.me/rankovastudio'}>
                             <div className="social-icon icon-box">
                                 <Image
                                     className="social-icon"
@@ -222,8 +227,14 @@ export const Nav = (props: INavItem) => {
                     </div>
                 </div>
             </div>
-            <button className="nav-btn">{props.btn}</button>
-            <button onClick={toggleMenu} className="burger">
+            <Link
+                href={'https://n814279.alteg.io/company/764262/record-type?o='}
+                target="_blank">
+                <button className="nav-btn">{props.btn}</button>
+            </Link>
+            <button
+                onClick={toggleMenu}
+                className="burger">
                 {isOpen ? (
                     <svg
                         width="45"
@@ -257,5 +268,5 @@ export const Nav = (props: INavItem) => {
                 )}
             </button>
         </nav>
-    );
-};
+    )
+}

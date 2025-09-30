@@ -1,17 +1,22 @@
-import { EnrollBtn } from "@/app/[locale]/elements/enroll-btn/EnrollBtn";
-import background from "@/app/img/Frame.png";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import "./Header.css";
+import { EnrollBtn } from '@/app/[locale]/elements/enroll-btn/EnrollBtn'
+import background from '@/app/img/Frame.png'
+import { useTranslations } from 'next-intl'
+import Image from 'next/image'
+import './Header.css'
 
 export const Header = () => {
-    const t = useTranslations("Header");
+    const t = useTranslations('Header')
     return (
         <header
             style={{
                 backgroundImage: `url(${background.src})`,
             }}>
-            <Image priority className="header-img" src={background} alt="bg" />
+            <Image
+                priority
+                className="header-img"
+                src={background}
+                alt="bg"
+            />
 
             <div className="header-content">
                 <svg
@@ -28,14 +33,14 @@ export const Header = () => {
                         fill="#FFDF18"
                     />
                 </svg>
-                <h1>{t("title")}</h1>
+                <h1>{t('title')}</h1>
                 <ul>
-                    <li>{t("list1")}</li>
-                    <li>{t("list2")}</li>
-                    <li>{t("list3")}</li>
+                    <li>{t('list1')}</li>
+                    <li>{t('list2')}</li>
+                    <li>{t('list3')}</li>
                 </ul>
                 <EnrollBtn black />
             </div>
         </header>
-    );
-};
+    )
+}
