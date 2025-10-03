@@ -23,11 +23,6 @@ export async function generateMetadata({
     return {
         title: t('title'),
         description: t('description'),
-        icons: {
-            shortcut: '/favicon.svg',
-            icon: '/favicon.svg',
-            apple: '/apple-touch-icon.png',
-        },
     }
 }
 
@@ -46,6 +41,19 @@ export default async function LocaleLayout({
 
     return (
         <html lang={locale}>
+            <head>
+                <link
+                    rel="shortcut icon"
+                    href="/apple-touch-icon.png"
+                    sizes="any"
+                    type="image/x-icon"
+                />
+                <link
+                    rel="mask-icon"
+                    href="/apple-touch-icon.png"
+                    color="#ffffff"
+                />
+            </head>
             <body className={`${comfortaa.className}`}>
                 <Nav
                     description={t('description')}
