@@ -1,4 +1,5 @@
 import { routing } from '@/i18n/routing'
+import { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { Comfortaa } from 'next/font/google'
 import { notFound } from 'next/navigation'
@@ -16,7 +17,7 @@ export async function generateMetadata({
     params: { locale },
 }: {
     params: { locale: string }
-}) {
+}): Promise<Metadata> {
     const t = await getTranslations({ locale, namespace: 'Metadata' })
 
     return {
@@ -25,6 +26,7 @@ export async function generateMetadata({
         icons: {
             shortcut: '/favicon.svg',
             icon: '/favicon.svg',
+            apple: '/apple-touch-icon.png',
         },
     }
 }
