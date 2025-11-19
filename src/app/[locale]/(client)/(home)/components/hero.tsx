@@ -31,6 +31,7 @@ export const HeroSection = async () => {
       <div className='w-full md:absolute md:inset-0'>
         <Image
           priority
+          fetchPriority='high'
           className='size-full object-cover object-top mix-blend-multiply md:object-contain md:object-[95%]'
           src='/home/hero.png'
           alt='Hero'
