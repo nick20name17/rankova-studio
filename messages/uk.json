@@ -164,6 +164,14 @@
         }
       }
     },
+    "Lesson": {
+      "Sections": {
+        "HowItWorks": {
+          "Title": "Як це працює?",
+          "TrialLesson": "Пробний урок"
+        }
+      }
+    },
     "NotFound": {
       "Title": "Здається, щось пішло не по плану ",
       "BackToHome": "Повернутись до головної"

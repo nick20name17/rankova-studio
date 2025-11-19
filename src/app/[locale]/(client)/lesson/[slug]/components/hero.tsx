@@ -23,7 +23,8 @@ export const HeroSection = ({ title, description, image }: HeroSectionProps) => 
       <div className='absolute inset-0 w-full overflow-hidden rounded-b-[40px]'>
         {image ? (
           <Image
-            priority
+            fetchPriority='high'
+            loading='eager'
             className='size-full object-cover object-top'
             src={image}
             alt={title}

@@ -7,7 +7,7 @@ type SectionProps = HtmlHTMLAttributes<HTMLDivElement>
 export const Section = ({ className, ...props }: SectionProps) => {
   return (
     <section
-      className={cn('container mt-15 md:mt-30', className)}
+      className={cn('container mt-20 md:mt-30', className)}
       {...props}
     />
   )

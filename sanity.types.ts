@@ -13,6 +13,32 @@
  */
 
 // Source: schema.json
+export type HowItWorksSection = {
+  _type: 'howItWorksSection'
+  image?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
+  description1?: string
+  description1_en?: string
+  description2?: string
+  description2_en?: string
+}
+
+export type FeedbackSection = {
+  _type: 'feedbackSection'
+  title?: string
+  title_en?: string
+}
+
 export type PriceItem = {
   _type: 'priceItem'
   label?: string
@@ -63,22 +89,6 @@ export type PriceSection = {
   >
 }
 
-export type SanityImageCrop = {
-  _type: 'sanity.imageCrop'
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
-}
-
-export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot'
-  x?: number
-  y?: number
-  height?: number
-  width?: number
-}
-
 export type TeachersSection = {
   _id: string
   _type: 'teachersSection'
@@ -106,6 +116,22 @@ export type TeachersSection = {
     crop?: SanityImageCrop
     _type: 'image'
   }
+}
+
+export type SanityImageCrop = {
+  _type: 'sanity.imageCrop'
+  top?: number
+  bottom?: number
+  left?: number
+  right?: number
+}
+
+export type SanityImageHotspot = {
+  _type: 'sanity.imageHotspot'
+  x?: number
+  y?: number
+  height?: number
+  width?: number
 }
 
 export type HeroSection = {
@@ -140,6 +166,13 @@ export type LessonsPage = {
   meta_description?: string
   meta_description_en?: string
   hero?: HeroSection
+  lessonFeedbackSection?: FeedbackSection
+  howItWorks?: HowItWorksSection
+  prices?: Array<
+    {
+      _key: string
+    } & PriceSection
+  >
 }
 
 export type Slug = {
@@ -245,12 +278,14 @@ export type Geopoint = {
 }
 
 export type AllSanitySchemaTypes =
+  | HowItWorksSection
+  | FeedbackSection
   | PriceItem
   | PriceGroup
   | PriceSection
+  | TeachersSection
   | SanityImageCrop
   | SanityImageHotspot
-  | TeachersSection
   | HeroSection
   | LessonsPage
   | Slug

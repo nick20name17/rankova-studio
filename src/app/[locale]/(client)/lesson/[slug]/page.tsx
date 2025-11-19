@@ -5,7 +5,10 @@ import { ContactUsSection } from '../../(home)/components/contact-us'
 import { WhyUsSection } from '../../(home)/components/why-us'
 import type { LessonsPage } from '../../../../../../sanity.types'
 
+import { FeedbackSection } from './components/feedback'
 import { HeroSection } from './components/hero'
+import { HowItWorks } from './components/how-it-works'
+import { PricesSection } from './components/prices'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
 
@@ -48,7 +51,10 @@ export default async function LessonPage({ params }: PageProps<'/[locale]/lesson
         title={title}
         image={heroImageUrl || ''}
       />
+      <FeedbackSection />
+      <HowItWorks />
       <WhyUsSection />
+      <PricesSection />
       <ContactUsSection />
     </>
   )

@@ -164,6 +164,14 @@
         }
       }
     },
+    "Lesson": {
+      "Sections": {
+        "HowItWorks": {
+          "Title": "How it works",
+          "TrialLesson": "Trial lesson"
+        }
+      }
+    },
     "NotFound": {
       "Title": "Something went wrong",
       "BackToHome": "Back to home"
