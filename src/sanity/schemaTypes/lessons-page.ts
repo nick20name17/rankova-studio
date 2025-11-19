@@ -89,6 +89,27 @@ export const howItWorksSection = defineType({
       name: 'description2_en',
       type: 'text',
       validation: (rule) => rule.required()
+    }),
+    defineField({
+      name: 'list',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              type: 'string',
+              validation: (rule) => rule.required()
+            }),
+            defineField({
+              name: 'title_en',
+              type: 'string',
+              validation: (rule) => rule.required()
+            })
+          ]
+        }
+      ]
     })
   ]
 })

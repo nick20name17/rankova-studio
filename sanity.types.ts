@@ -31,6 +31,11 @@ export type HowItWorksSection = {
   description1_en?: string
   description2?: string
   description2_en?: string
+  list?: Array<{
+    title?: string
+    title_en?: string
+    _key: string
+  }>
 }
 
 export type FeedbackSection = {

@@ -54,7 +54,7 @@ export const PricesSection = async () => {
             return (
               <CarouselItem
                 className='pl-8 md:basis-1/2 lg:basis-1/3'
-                key={price._id}
+                key={price._key}
               >
                 <PriceCard price={price} />
               </CarouselItem>
