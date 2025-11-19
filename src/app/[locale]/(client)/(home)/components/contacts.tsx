@@ -18,6 +18,7 @@ export const ContactsSection = async () => {
       <H2>{t('Title')}</H2>
       <div className='mt-13 flex items-center justify-between gap-10 max-lg:flex-col'>
         <iframe
+          title='google maps'
           className='basis-2/3 rounded-4xl max-lg:min-h-100 max-lg:w-full max-sm:min-h-85'
           src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2101.9874029237603!2d26.224303905385316!3d50.61905798643908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472f6cb0ad730493%3A0x807759f89dcf2d10!2sPetra%20Mohyly%20St%2C%2028%2C%20Rivne%2C%20Rivnens&#39;ka%20oblast%2C%2033000!5e0!3m2!1sen!2sua!4v1727793174036!5m2!1sen!2sua'
           width='600'

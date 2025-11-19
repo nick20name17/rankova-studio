@@ -27,6 +27,7 @@ export const MobileHeaderNav = ({ className }: MobileHeaderNavProps) => {
     >
       <SheetTrigger asChild>
         <Button
+          title='Mobile menu'
           className={cn('cursor-pointer rounded-full transition-transform hover:scale-95', className)}
           variant='outline'
           size='icon'

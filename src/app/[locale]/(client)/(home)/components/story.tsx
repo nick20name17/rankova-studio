@@ -35,6 +35,8 @@ export const StorySection = async () => {
         <Image
           src='/home/story.png'
           alt='Story'
+          fetchPriority='high'
+          loading='eager'
           width={711}
           height={589}
           unoptimized
