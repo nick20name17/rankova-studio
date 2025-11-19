@@ -8,6 +8,7 @@ interface LogoProps {
 export const Logo = ({ className }: LogoProps) => {
   return (
     <Link
+      title='Rankova Studio'
       className={cn('hover:text-accent h-22 w-47 shrink-0 mix-blend-multiply transition-colors', className)}
       href='/'
     >

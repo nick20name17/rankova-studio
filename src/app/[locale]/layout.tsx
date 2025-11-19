@@ -15,11 +15,11 @@ export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('Pages.Home')
 
   return {
-    title: t('Title'),
+    title: 'Rankova Studio',
     description: t('Description'),
     openGraph: {
       type: 'website',
-      title: t('Title'),
+      title: 'Rankova Studio',
       description: t('Description'),
       url: 'https://www.rankovastudio.com',
       images: [
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('Title'),
+      title: 'Rankova Studio',
       description: t('Description'),
       images: ['https://www.rankovastudio.com/og-image.png']
     }
