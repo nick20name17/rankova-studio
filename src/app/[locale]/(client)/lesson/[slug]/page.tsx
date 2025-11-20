@@ -24,9 +24,40 @@ export async function generateMetadata({ params }: PageProps<'/[locale]/lesson/[
   const title = locale == 'en' ? data?.meta_title_en : data?.meta_title
   const description = locale == 'en' ? data?.meta_description_en : data?.meta_description
 
+  const heroImageUrl = data?.hero?.image
+    ? urlFor(data.hero.image).url()
+    : 'https://www.rankovastudio.com/og-image.png'
+
   return {
-    title: title ?? '404',
-    description
+    title,
+    description,
+    alternates: {
+      languages: {
+        uk: `https://www.rankovastudio.com/lesson/${data.slug}`,
+        en: `https://www.rankovastudio.com/en/lesson/${data.slug}`,
+        'x-default': `https://www.rankovastudio.com/lesson/${data.slug}`
+      }
+    },
+    openGraph: {
+      type: 'website',
+      title,
+      description: description,
+      url: `https://www.rankovastudio.com/lesson/${data.slug}`,
+      images: [
+        {
+          url: heroImageUrl,
+          alt: title,
+          width: 1200,
+          height: 630
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: description,
+      images: [heroImageUrl]
+    }
   }
 }
 
