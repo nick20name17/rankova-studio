@@ -165,6 +165,18 @@ export type LessonsPage = {
   _createdAt: string
   _updatedAt: string
   _rev: string
+  icon?: {
+    asset?: {
+      _ref: string
+      _type: 'reference'
+      _weak?: boolean
+      [internalGroqTypeReferenceTo]?: 'sanity.imageAsset'
+    }
+    media?: unknown
+    hotspot?: SanityImageHotspot
+    crop?: SanityImageCrop
+    _type: 'image'
+  }
   meta_title?: string
   meta_title_en?: string
   slug?: Slug

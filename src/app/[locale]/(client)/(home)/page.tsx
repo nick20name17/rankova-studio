@@ -10,6 +10,7 @@ import { FeedbackSection } from './components/feedback'
 import { HeroSection } from './components/hero'
 import { PhotosSection } from './components/photos'
 import { PricesSection } from './components/prices/prices'
+import { ServicesSection } from './components/service'
 import { StorySection } from './components/story'
 import { TeachersSection } from './components/teachers/teachers'
 import { TickerTape } from './components/ticker-tape'
@@ -40,6 +41,7 @@ const HomePage = async ({ params }: PageProps<'/[locale]'>) => {
       <StorySection />
       <AdvantagesSection />
       <TeachersSection />
+      <ServicesSection />
       <VacancySection />
       <PricesSection />
       <ContactUsSection />

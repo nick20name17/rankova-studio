@@ -4,6 +4,10 @@
       "Title": "Music for everyone, not just the chosen",
       "Description": "Music for everyone, not just the chosen",
       "Sections": {
+        "Services": {
+          "Title": "Our services",
+          "Enroll": "Enroll"
+        },
         "Prices": {
           "Title": "Prices",
           "Card": {

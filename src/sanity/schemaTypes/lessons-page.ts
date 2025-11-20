@@ -5,6 +5,12 @@ export const lessonsPageType = defineType({
   title: 'Lessons Page',
   type: 'document',
   fields: [
+    defineField({
+      name: 'icon',
+      type: 'image',
+      options: { hotspot: true, accept: 'image/*' },
+      validation: (rule) => rule.required()
+    }),
     defineField({ name: 'meta_title', type: 'string', validation: (r) => r.required() }),
     defineField({ name: 'meta_title_en', type: 'string', validation: (r) => r.required() }),
 
