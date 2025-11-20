@@ -170,6 +170,9 @@
     },
     "Lesson": {
       "Sections": {
+        "HowToEnroll": {
+          "Title": "Як записатись на заняття?"
+        },
         "HowItWorks": {
           "Title": "Як це працює?",
           "TrialLesson": "Пробний урок"

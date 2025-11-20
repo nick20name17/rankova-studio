@@ -170,6 +170,9 @@
     },
     "Lesson": {
       "Sections": {
+        "HowToEnroll": {
+          "Title": "How to enroll in classes"
+        },
         "HowItWorks": {
           "Title": "How it works",
           "TrialLesson": "Trial lesson"

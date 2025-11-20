@@ -8,6 +8,7 @@ import type { LessonsPage } from '../../../../../../sanity.types'
 import { FeedbackSection } from './components/feedback'
 import { HeroSection } from './components/hero'
 import { HowItWorks } from './components/how-it-works'
+import { HowToEnroll } from './components/how-to-enroll'
 import { PricesSection } from './components/prices'
 import { client } from '@/sanity/lib/client'
 import { urlFor } from '@/sanity/lib/image'
@@ -85,6 +86,7 @@ export default async function LessonPage({ params }: PageProps<'/[locale]/lesson
       <FeedbackSection />
       <HowItWorks />
       <WhyUsSection />
+      <HowToEnroll />
       <PricesSection />
       <ContactUsSection />
     </>

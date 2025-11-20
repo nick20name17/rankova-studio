@@ -40,9 +40,9 @@ export const FeedbackSection = async () => {
           loop: true
         }}
       >
-        <div className='flex items-center max-sm:justify-between'>
+        <div className='flex items-center gap-4 max-sm:justify-between'>
           <div className='max-sm:hidden sm:basis-1/3'></div>
-          <H2 className='text-center sm:basis-1/3'>{title}</H2>
+          <H2 className='sm:basis-1/3 sm:text-center'>{title}</H2>
           <div className='flex items-center justify-end gap-4 sm:basis-1/3'>
             <CarouselPrevious className='static translate-0' />
             <CarouselNext className='static translate-0' />
