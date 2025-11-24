@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { setRequestLocale } from 'next-intl/server'
 
+import type { Locale } from '@/i18n/routing'
 import { AdvantagesSection } from './components/advantages'
 import { CertificatesSection } from './components/certificates'
 import { ContactUsSection } from './components/contact-us'
@@ -10,13 +11,11 @@ import { FeedbackSection } from './components/feedback'
 import { HeroSection } from './components/hero'
 import { PhotosSection } from './components/photos'
 import { PricesSection } from './components/prices/prices'
-import { ServicesSection } from './components/service'
 import { StorySection } from './components/story'
 import { TeachersSection } from './components/teachers/teachers'
 import { TickerTape } from './components/ticker-tape'
 import { VacancySection } from './components/vacancy'
 import { WhyUsSection } from './components/why-us'
-import type { Locale } from '@/i18n/routing'
 
 export const metadata: Metadata = {
   alternates: {
@@ -41,7 +40,7 @@ const HomePage = async ({ params }: PageProps<'/[locale]'>) => {
       <StorySection />
       <AdvantagesSection />
       <TeachersSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <VacancySection />
       <PricesSection />
       <ContactUsSection />
