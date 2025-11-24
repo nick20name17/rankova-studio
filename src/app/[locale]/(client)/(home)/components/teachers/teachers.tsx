@@ -14,7 +14,7 @@ import {
 } from '@/components/ui/carousel'
 import { client } from '@/sanity/lib/client'
 
-const TEACHERS_QUERY = `*[_type == "teachersSection"]`
+const TEACHERS_QUERY = `*[_type == "teachersSection"] | order(orderRank)`
 const options = { next: { revalidate: 60 } }
 
 export const TeachersSection = async () => {

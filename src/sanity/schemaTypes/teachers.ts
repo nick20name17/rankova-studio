@@ -1,10 +1,13 @@
+import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
 import { defineField, defineType } from 'sanity'
 
 export const teachersSection = defineType({
   name: 'teachersSection',
   title: 'Teachers Section',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'document' }),
     defineField({
       name: 'name',
       type: 'string',
