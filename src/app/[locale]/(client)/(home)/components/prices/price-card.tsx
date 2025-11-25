@@ -22,7 +22,7 @@ export const PriceCard = ({ price }: PriceCardProps) => {
   const image = price?.icon ? urlFor(price?.icon).url() : null
 
   return (
-    <div className='w-full space-y-8 rounded-3xl border p-8'>
+    <div className='w-full space-y-8 rounded-3xl border p-7'>
       <div className='flex w-full items-center justify-center gap-3'>
         {image ? (
           <Image
@@ -50,7 +50,7 @@ export const PriceCard = ({ price }: PriceCardProps) => {
                 <div className='flex flex-col gap-0.5'>
                   <div className='flex items-center gap-1'>
                     <span className='text-lg font-bold'>
-                      {label} {group.duration ? '' : label ? ':' : ''}
+                      {label} {group.duration ? '' : label && group.items?.length ? ':' : ''}
                     </span>
                     {group.duration && (
                       <span className='text-muted text-sm'>
@@ -61,7 +61,9 @@ export const PriceCard = ({ price }: PriceCardProps) => {
                   </div>
                   <span className='text-muted text-sm leading-none'>{description}</span>
                 </div>
-                {group.price ? <div className='text-lg font-bold'>{group.price} ₴</div> : null}
+                {group.price ? (
+                  <div className='text-lg font-bold whitespace-nowrap'>{group.price} ₴</div>
+                ) : null}
               </div>
               <ul className='mt-1 list-inside list-disc'>
                 {group.items?.map((item) => {
