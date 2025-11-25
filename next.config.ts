@@ -7,6 +7,8 @@ const nextConfig: NextConfig = {
     inlineCss: true
   },
   images: {
+    minimumCacheTTL: 60 * 60 * 24 * 7,
+    qualities: [75, 100],
     remotePatterns: [
       {
         protocol: 'https',
