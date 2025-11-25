@@ -29,7 +29,7 @@ export const TeacherCard = ({ teacher }: TeacherCardProps) => {
       <div className='w-74 shrink-0'>
         <div className='relative h-90 w-full'>
           <div className='absolute top-5 right-7'>
-            <div className='absolute top-[35%] left-1/2 z-10 -translate-1/2 text-xl whitespace-nowrap'>
+            <div className='absolute top-[40%] left-1/2 z-10 -translate-1/2 text-lg leading-tight'>
               {name}
             </div>
             <BlobIcon />
