@@ -176,6 +176,9 @@
         "HowItWorks": {
           "Title": "How it works",
           "TrialLesson": "Trial lesson"
+        },
+        "Prices": {
+          "Description": "*online and offline lessons"
         }
       }
     },

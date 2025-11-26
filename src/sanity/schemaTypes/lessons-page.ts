@@ -1,10 +1,13 @@
+import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
 import { defineField, defineType } from 'sanity'
 
 export const lessonsPageType = defineType({
   name: 'lessonsPage',
   title: 'Lessons Page',
   type: 'document',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'document' }),
     defineField({
       name: 'icon',
       type: 'image',

@@ -176,6 +176,9 @@
         "HowItWorks": {
           "Title": "Як це працює?",
           "TrialLesson": "Пробний урок"
+        },
+        "Prices": {
+          "Description": "*онлайн і офлайн заняття"
         }
       }
     },
