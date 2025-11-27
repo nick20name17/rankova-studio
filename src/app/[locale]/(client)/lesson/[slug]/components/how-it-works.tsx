@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from 'next-intl/server'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import type { LessonsPage } from '../../../../../../../sanity.types'
 
@@ -75,7 +76,17 @@ export const HowItWorks = async () => {
 
           <div className='flex flex-col gap-4 max-md:order-2 md:h-full md:justify-between'>
             <p>{description2}</p>
-            <Button className='w-full'>{t('TrialLesson')}</Button>
+            <Button
+              className='w-full'
+              asChild
+            >
+              <Link
+                href='https://n814279.alteg.io/company/764262/record-type?o='
+                target='_blank'
+              >
+                {t('TrialLesson')}
+              </Link>
+            </Button>
           </div>
 
           <ul className='col-span-1 col-start-1 mt-4 grid gap-5 max-md:order-4 sm:grid-cols-2 md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-2'>
