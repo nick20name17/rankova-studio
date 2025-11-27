@@ -50,7 +50,8 @@ export const PriceCard = ({ price }: PriceCardProps) => {
                 <div className='flex flex-col gap-0.5'>
                   <div className='flex items-center gap-1'>
                     <span className='text-lg font-bold'>
-                      {label} {group.duration ? '' : label && group.items?.length ? ':' : ''}
+                      {label}
+                      {group.duration ? '' : label && group.items?.length ? ':' : ''}
                     </span>
                     {group.duration && (
                       <span className='text-muted text-sm'>
@@ -76,7 +77,7 @@ export const PriceCard = ({ price }: PriceCardProps) => {
                       <span className='text-xl'>•</span>
                       <div className='flex w-full items-center justify-between'>
                         <span>
-                          <span className='text-lg'>{label}:</span>{' '}
+                          <span className='text-lg'>{label}</span>{' '}
                           {item.duration && (
                             <span className='text-muted text-sm'>
                               ({item.duration}
