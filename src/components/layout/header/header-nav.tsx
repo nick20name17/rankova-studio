@@ -8,15 +8,16 @@ import { cn } from '@/lib/utils'
 
 interface HeaderNavProps {
   className?: string
+  onLinkClick?: () => void
 }
 
-export const HeaderNav = ({ className }: HeaderNavProps) => {
+export const HeaderNav = ({ className, onLinkClick }: HeaderNavProps) => {
   const t = useTranslations('Common')
 
   return (
     <nav className={cn('border-muted-foreground flex h-15 items-center rounded-full border px-5', className)}>
       <ul className='flex w-full items-center xl:gap-6 max-xl:[&_a]:py-3 max-xl:[&_li]:w-full'>
-        <li>
+        <li onClick={onLinkClick}>
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#about'
@@ -24,7 +25,7 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.About')}
           </Link>
         </li>
-        <li>
+        <li onClick={onLinkClick}>
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#teachers'
@@ -32,7 +33,7 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.Teachers')}
           </Link>
         </li>
-        <li>
+        <li onClick={onLinkClick}>
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#price'
@@ -40,7 +41,7 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.Prices')}
           </Link>
         </li>
-        <li>
+        <li onClick={onLinkClick}>
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#certificates'
@@ -48,7 +49,10 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.GiftCertificates')}
           </Link>
         </li>
-        <li className='xl:hidden'>
+        <li
+          className='xl:hidden'
+          onClick={onLinkClick}
+        >
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#feedback'
@@ -56,7 +60,10 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.Feedback')}
           </Link>
         </li>
-        <li className='xl:hidden'>
+        <li
+          className='xl:hidden'
+          onClick={onLinkClick}
+        >
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#faq'
@@ -64,7 +71,7 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.Faq')}
           </Link>
         </li>
-        <li>
+        <li onClick={onLinkClick}>
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#contacts'
@@ -72,7 +79,10 @@ export const HeaderNav = ({ className }: HeaderNavProps) => {
             {t('HeaderNav.Contacts')}
           </Link>
         </li>
-        <li className='xl:hidden'>
+        <li
+          className='xl:hidden'
+          onClick={onLinkClick}
+        >
           <Link
             className='hover:text-accent block text-lg font-semibold transition-colors'
             href='/#vacancy'

@@ -74,7 +74,10 @@ export const MobileHeaderNav = ({ className }: MobileHeaderNavProps) => {
         </SheetHeader>
 
         <div className='flex-1 overflow-y-auto px-9 py-10'>
-          <HeaderNav className='h-auto border-none p-0 [&_ul]:flex-col [&_ul]:items-start' />
+          <HeaderNav
+            onLinkClick={() => setOpen(false)}
+            className='h-auto border-none p-0 [&_ul]:flex-col [&_ul]:items-start'
+          />
           <Link
             className='mt-10 block text-lg font-bold hover:underline'
             href={`tel:${PHONE_NUMBER}`}
