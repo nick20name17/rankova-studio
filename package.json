@@ -8,15 +8,6 @@
     "start": "next start",
     "lint": "eslint"
   },
-  "browserslist": [
-    "> 0.1%",
-    "last 4 versions",
-    "Chrome >= 90",
-    "Firefox >= 88",
-    "Safari >= 14",
-    "Edge >= 90",
-    "not dead"
-  ],
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@sanity/hierarchical-document-list": "^2.1.2",
@@ -28,8 +19,8 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.553.0",
-    "next": "16.0.3",
-    "next-intl": "^4.5.3",
+    "next": "15.5.5",
+    "next-intl": "4.3.5",
     "next-sanity": "^11.6.7",
     "radix-ui": "^1.4.3",
     "react": "19.2.0",
