@@ -8,6 +8,15 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "browserslist": [
+    "> 0.05%",
+    "last 5 versions",
+    "Chrome >= 60",
+    "Firefox >= 55",
+    "Safari >= 11",
+    "Edge >= 79",
+    "not dead"
+  ],
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@sanity/hierarchical-document-list": "^2.1.2",
