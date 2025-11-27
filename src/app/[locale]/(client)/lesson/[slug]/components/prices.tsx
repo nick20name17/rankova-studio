@@ -23,7 +23,7 @@ const PRICES_QUERY = `
     }
   }
 `
-const options = { next: { revalidate: 60 } }
+const options = {}
 
 export const PricesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Prices')

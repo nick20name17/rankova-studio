@@ -15,7 +15,7 @@ import {
 import { client } from '@/sanity/lib/client'
 
 const TEACHERS_QUERY = `*[_type == "teachersSection"] | order(orderRank)`
-const options = { next: { revalidate: 60 } }
+const options = {}
 
 export const TeachersSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Teachers')

@@ -15,7 +15,7 @@ import {
 import { client } from '@/sanity/lib/client'
 
 const PRICES_QUERY = `*[_type == "priceSection"] | order(orderRank)`
-const options = { next: { revalidate: 60 } }
+const options = {}
 
 export const PricesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Prices')

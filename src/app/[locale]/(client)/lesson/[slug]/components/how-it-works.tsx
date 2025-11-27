@@ -21,7 +21,7 @@ export const HowItWorks = async () => {
   const t = await getTranslations('Pages.Lesson.Sections.HowItWorks')
   const locale = await getLocale()
 
-  const { howItWorks } = (await client.fetch(QUERY, {}, { next: { revalidate: 60 } })) as {
+  const { howItWorks } = (await client.fetch(QUERY, {}, {})) as {
     howItWorks: LessonsPage['howItWorks']
   }
 

@@ -32,7 +32,7 @@ const BlobIcon = () => {
 }
 
 const TEACHERS_QUERY = `*[_type == "lessonsPage"]`
-const options = { next: { revalidate: 60 } }
+const options = {}
 
 export const ServicesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Services')

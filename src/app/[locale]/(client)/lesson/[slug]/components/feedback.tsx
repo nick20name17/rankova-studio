@@ -23,7 +23,7 @@ const QUERY = `
 export const FeedbackSection = async () => {
   const locale = await getLocale()
 
-  const { lessonFeedbackSection } = (await client.fetch(QUERY, {}, { next: { revalidate: 60 } })) as {
+  const { lessonFeedbackSection } = (await client.fetch(QUERY, {}, {})) as {
     lessonFeedbackSection: LessonsPage['lessonFeedbackSection']
   }
 
