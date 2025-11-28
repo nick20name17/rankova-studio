@@ -22,8 +22,6 @@ export const PricesSection = async () => {
 
   const prices = (await client.fetch(PRICES_QUERY, {}, options)) as PriceSection[]
 
-  console.log(prices)
-
   return (
     <Section
       className='overflow-x-hidden'
