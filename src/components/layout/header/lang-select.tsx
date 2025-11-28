@@ -1,11 +1,12 @@
 'use client'
 
+import { useParams } from 'next/navigation'
 import { useTransition } from 'react'
 import { useLocale, useTranslations } from 'use-intl'
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { useRouter } from '@/i18n/navigation'
-import { routing } from '@/i18n/routing'
+import { usePathname, useRouter } from '@/i18n/navigation'
+import { type Locale, routing } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
 interface LangSelectProps {
@@ -18,12 +19,18 @@ export const LangSelect = ({ className }: LangSelectProps) => {
   const locale = useLocale()
   const [isPending, startTransition] = useTransition()
 
-  // const pathname = usePathname()
-  // const params = useParams()
+  const pathname = usePathname()
+  const params = useParams()
 
   const handleLocaleChange = (newLocale: string) => {
     startTransition(() => {
-      router.replace(`/${newLocale}`)
+      router.replace(
+        // @ts-expect-error -- TypeScript will validate that only known `params`
+        // are used in combination with a given `pathname`. Since the two will
+        // always match for the current route, we can skip runtime checks.
+        { pathname, params },
+        { locale: newLocale as Locale }
+      )
     })
   }
 
