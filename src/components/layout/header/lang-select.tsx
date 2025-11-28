@@ -4,8 +4,8 @@ import { useTransition } from 'react'
 import { useLocale, useTranslations } from 'use-intl'
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { usePathname, useRouter } from '@/i18n/navigation'
-import { type Locale, routing } from '@/i18n/routing'
+import { useRouter } from '@/i18n/navigation'
+import { routing } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
 interface LangSelectProps {
@@ -18,11 +18,12 @@ export const LangSelect = ({ className }: LangSelectProps) => {
   const locale = useLocale()
   const [isPending, startTransition] = useTransition()
 
-  const pathname = usePathname()
+  // const pathname = usePathname()
+  // const params = useParams()
 
   const handleLocaleChange = (newLocale: string) => {
     startTransition(() => {
-      router.replace({ pathname }, { locale: newLocale as Locale })
+      router.replace(`/${newLocale}`)
     })
   }
 
