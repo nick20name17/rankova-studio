@@ -29,7 +29,13 @@ export const PricesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Prices')
   const t2 = await getTranslations('Pages.Lesson.Sections.Prices')
 
-  const { prices } = (await client.fetch(PRICES_QUERY, {}, options)) as { prices: LessonsPage['prices'] }
+  const { prices } = (await client.fetch(
+    PRICES_QUERY,
+    {},
+    {
+      cache: 'no-cache'
+    }
+  )) as { prices: LessonsPage['prices'] }
 
   return (
     <Section
