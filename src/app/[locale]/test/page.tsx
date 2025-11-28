@@ -1,4 +1,4 @@
-import type { PriceSection } from '../../../sanity.types'
+import type { PriceSection } from '../../../../sanity.types'
 
 import { client } from '@/sanity/lib/client'
 
