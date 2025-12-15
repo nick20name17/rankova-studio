@@ -42,11 +42,7 @@ export const lessonsPageType = defineType({
       type: 'howItWorksSection'
     }),
 
-    defineField({
-      name: 'prices',
-      type: 'array',
-      of: [{ type: 'priceSection' }]
-    })
+    defineField({ name: 'price', type: 'number', validation: (r) => r.required() })
   ]
 })
 

@@ -8,7 +8,7 @@ export const ContactUsSection = async () => {
 
   return (
     <section
-      className='relative mt-30 flex h-188 flex-col items-center justify-center bg-cover bg-left bg-no-repeat'
+      className='relative mt-15 flex h-188 flex-col items-center justify-center bg-cover bg-left bg-no-repeat'
       style={{ backgroundImage: `url('/home/contact-us.svg')` }}
     >
       <div className='container'>

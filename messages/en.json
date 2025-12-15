@@ -178,6 +178,10 @@
           "TrialLesson": "Trial lesson"
         },
         "Prices": {
+          "SingleLesson": {
+            "Title": "Single lesson",
+            "Duration": "min"
+          },
           "Description": "*online and offline lessons"
         }
       }

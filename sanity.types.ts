@@ -73,6 +73,7 @@ export type PriceSection = {
   _createdAt: string
   _updatedAt: string
   _rev: string
+  orderRank?: string
   title?: string
   title_en?: string
   icon?: {
@@ -94,12 +95,29 @@ export type PriceSection = {
   >
 }
 
+export type SanityImageCrop = {
+  _type: 'sanity.imageCrop'
+  top?: number
+  bottom?: number
+  left?: number
+  right?: number
+}
+
+export type SanityImageHotspot = {
+  _type: 'sanity.imageHotspot'
+  x?: number
+  y?: number
+  height?: number
+  width?: number
+}
+
 export type TeachersSection = {
   _id: string
   _type: 'teachersSection'
   _createdAt: string
   _updatedAt: string
   _rev: string
+  orderRank?: string
   name?: string
   name_en?: string
   expirience?: number
@@ -121,22 +139,6 @@ export type TeachersSection = {
     crop?: SanityImageCrop
     _type: 'image'
   }
-}
-
-export type SanityImageCrop = {
-  _type: 'sanity.imageCrop'
-  top?: number
-  bottom?: number
-  left?: number
-  right?: number
-}
-
-export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot'
-  x?: number
-  y?: number
-  height?: number
-  width?: number
 }
 
 export type HeroSection = {
@@ -165,6 +167,7 @@ export type LessonsPage = {
   _createdAt: string
   _updatedAt: string
   _rev: string
+  orderRank?: string
   icon?: {
     asset?: {
       _ref: string
@@ -185,11 +188,7 @@ export type LessonsPage = {
   hero?: HeroSection
   lessonFeedbackSection?: FeedbackSection
   howItWorks?: HowItWorksSection
-  prices?: Array<
-    {
-      _key: string
-    } & PriceSection
-  >
+  price?: number
 }
 
 export type Slug = {
@@ -300,9 +299,9 @@ export type AllSanitySchemaTypes =
   | PriceItem
   | PriceGroup
   | PriceSection
-  | TeachersSection
   | SanityImageCrop
   | SanityImageHotspot
+  | TeachersSection
   | HeroSection
   | LessonsPage
   | Slug

@@ -178,6 +178,10 @@
           "TrialLesson": "Пробний урок"
         },
         "Prices": {
+          "SingleLesson": {
+            "Title": "Разове заняття",
+            "Duration": "хв"
+          },
           "Description": "*онлайн і офлайн заняття"
         }
       }
