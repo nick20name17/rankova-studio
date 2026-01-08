@@ -44,7 +44,7 @@ export const AboutUsVideo = () => {
   }, [])
 
   return (
-    <VideoPlayer className='mt-8 w-full overflow-hidden rounded-3xl border sm:h-[75svh]'>
+    <VideoPlayer className='mt-8 w-full overflow-hidden rounded-3xl border sm:h-[82svh]'>
       <VideoPlayerContent
         ref={videoRef}
         crossOrigin=''
