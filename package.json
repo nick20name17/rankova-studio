@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "lucide-react": "^0.553.0",
+    "media-chrome": "^4.17.2",
     "next": "16.0.7",
     "next-intl": "^4.6.0",
     "next-sanity": "^11.6.10",

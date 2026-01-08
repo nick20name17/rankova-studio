@@ -43,7 +43,7 @@ export const StorySection = async () => {
           className='object-cover object-top'
         />
       </div>
-      <div className='mt-20 space-y-10 max-lg:px-4'>
+      <div className='space-y-10 max-lg:px-4 lg:mt-20'>
         <H2>{t('Title')}</H2>
         <div className='space-y-3'>
           <p className='text-2xl font-medium'>{t('Founder')}</p>
