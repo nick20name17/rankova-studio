@@ -56,8 +56,8 @@ export const AboutUsVideo = () => {
 
       <VideoPlayerControlBar>
         <VideoPlayerPlayButton />
-        <VideoPlayerSeekBackwardButton />
-        <VideoPlayerSeekForwardButton />
+        <VideoPlayerSeekBackwardButton className='max-sm:hidden' />
+        <VideoPlayerSeekForwardButton className='max-sm:hidden' />
         <VideoPlayerTimeRange />
         <VideoPlayerTimeDisplay showDuration />
         <VideoPlayerMuteButton />

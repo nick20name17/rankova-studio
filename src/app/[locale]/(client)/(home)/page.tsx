@@ -37,8 +37,8 @@ const HomePage = async ({ params }: PageProps<'/[locale]'>) => {
     <>
       <HeroSection />
       <TickerTape />
-      <WhyUsSection />
       <AboutUs />
+      <WhyUsSection />
       <StorySection />
       <AdvantagesSection />
       <TeachersSection />
