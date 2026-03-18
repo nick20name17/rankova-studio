@@ -23,7 +23,7 @@ const QUERY = `
 export const FeedbackSection = async () => {
   const locale = await getLocale()
 
-  const { lessonFeedbackSection } = (await client.fetch(QUERY, {}, {})) as {
+  const { lessonFeedbackSection } = (await client.fetch(QUERY, {}, { cache: 'no-store' as const })) as {
     lessonFeedbackSection: LessonsPage['lessonFeedbackSection']
   }
 

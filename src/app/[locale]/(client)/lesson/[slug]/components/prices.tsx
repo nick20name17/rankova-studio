@@ -10,7 +10,7 @@ import { client } from '@/sanity/lib/client'
 const PRICES_QUERY = `
   *[_type == "lessonsPage"][0]
 `
-const options = {}
+const options = { cache: 'no-store' as const }
 
 export const PricesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Prices')

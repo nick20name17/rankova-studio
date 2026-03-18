@@ -32,7 +32,7 @@ const BlobIcon = () => {
 }
 
 const TEACHERS_QUERY = `*[_type == "lessonsPage"]`
-const options = {}
+const options = { cache: 'no-store' as const }
 
 export const ServicesSection = async () => {
   const t = await getTranslations('Pages.Home.Sections.Services')

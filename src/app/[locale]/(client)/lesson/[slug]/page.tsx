@@ -15,7 +15,7 @@ import { urlFor } from '@/sanity/lib/image'
 
 const LESSON_QUERY = `*[_type == "lessonsPage" && slug.current == $slug][0]`
 
-const options = {}
+const options = { cache: 'no-store' as const }
 
 export async function generateMetadata({ params }: PageProps<'/[locale]/lesson/[slug]'>): Promise<Metadata> {
   const { slug, locale } = await params
